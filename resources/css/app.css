@@ -1,0 +1,50 @@
+.container,
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  margin-right: 2% !important;
+  margin-left: 2% !important;
+}
+
+nav{
+    height: 100px;
+}
+
+.navbar{
+    height: auto;
+}
+
+.navbar-nav{
+    margin-top: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-weight: 600;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav_title{
+    color: white !important;
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin: auto;
+}
+
+
+/*Responsivity*/
+
+@media (max-width: 1240px) {
+    
+}
+
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 890px) {
+    
+}
