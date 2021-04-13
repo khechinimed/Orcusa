@@ -3,8 +3,15 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const routes = [
+import home from './components/pages/home'
 
+const routes = [
+    //Project routes
+
+    {
+        path: '/',
+        component: home
+    }
 ]
 
 export default new Router({
