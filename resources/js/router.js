@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import home from './components/pages/home'
+import association from './components/pages/association'
 
 const routes = [
     //Project routes
@@ -11,6 +12,10 @@ const routes = [
     {
         path: '/',
         component: home
+    },
+    {
+        path: '/association',
+        component: association
     }
 ]
 
