@@ -10989,6 +10989,11 @@ nav{
     background-color: #EBEBEB;
 }
 
+.home h2{
+    font-family: 'Teko', sans-serif;
+    font-size: 4rem;
+}
+
 .banner .row{
     margin: 0;
     padding: 0;
@@ -11039,8 +11044,49 @@ nav{
     background-size: cover;
     background-position-y: center;
 }
+.actus{
+    padding: 35px;
+    margin-top: 4%;
+}
 
+.actus section{
+    height: 40rem;
+}
 
+.description{
+    background-color: #435560;
+    color: #EBEAD9;
+    padding: 35px;
+    padding-top: 70px;
+    padding-bottom: 115px;
+    margin-top: 5%;
+}
+
+.description p{
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+.mannette{
+    position: relative;
+    width: 30%;
+    bottom: 130px;
+    float: right;
+}
+
+.nos_stream{
+    padding: 40px;
+    margin-top: 4%;
+}
+.nos_stream .col{
+    padding-top: 40px;
+    padding-left: 0;
+}
+
+.faq{
+    background-color: #D2D1BD;
+}
 
 /*Responsivity*/
 
@@ -11056,6 +11102,13 @@ nav{
     .banner .col i{
         padding: 3%;
         font-size: 1.5rem;
+    }
+
+    .home h2{
+        font-size: 3rem;
+    }
+    .description p{
+        font-size: 14px;
     }
 
 }
@@ -11075,5 +11128,15 @@ nav{
 
     #banner_image{
         display: none;
+    }
+
+    .home h2{
+        font-size: 2rem;
+    }
+    .description p{
+        font-size: 12px;
+    }
+    .mannette{
+        bottom: 100px;
     }
 }

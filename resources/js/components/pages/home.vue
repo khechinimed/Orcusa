@@ -5,7 +5,10 @@
                 <div class="col">
                     <img class="banner_logo" :src="'/images/logo.png'">
                     <h1>ORCUSA</h1>
-                    <p>Une association<br> pour soutenir les gamers sensibiliser et animer</p>
+                    <div id="typed-strings">
+                        <p>Une association<br> pour soutenir les gamers sensibiliser et animer</p>
+                    </div>
+                    <span id="typed"></span>
                     <i class="fas fa-chevron-down"></i>
                     <section>
                         <a target="_blank" href="https://www.facebook.com/Orcusaasso/"><i class="fab fa-facebook-square"></i></a>
@@ -19,15 +22,57 @@
                     <div class="banner_image">
 
                     </div>
-                    <!--<img :src="'/images/home_image.jpg'"> -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="actus">
+            <div class="container">
+                <h2>Derniers Actus</h2>
+                <section>
+                    
+                </section>
+            </div>
+        </div>
+        
+        <div class="description">
+            <div class="container">
+                <h2>QUI SOMMES NOUS ?</h2>
+                <section>
+                    <p>Cette association a pour but d'aider les personnes en situation de handicap afin d'améliorer ou permettre de pouvoir accéder à l'univers du jeu vidéo via des logiciels ou matériels adaptés. Nous organisons des entretiens avec les personnes nous contactant pour faire un bilan de leurs situations en terme d'expériences vidéoludique et cherchons la meilleure solution a leurs besoins en termes de connectiques ou logiciels en fonction du type de jeux qu'ils jouent ou voudraient jouer. Nous organisons également des événements avec nos membres de l'association afin de partager un moment convivial entre nous ou des événements e-sport. 
+                    <br><br>Notre but est de montrer que tout le monde peut s'amuser avec les jeux vidéos et que le handicap n'est pas un obstacle pour s'amuser, partager une expérience vidéoludique avec d'autres et montrer que les personnes handicapés peuvent très bien faire de l'e-sport.</p>
+                </section>
+            </div>
+        </div>
+        <img class="mannette" :src="'/images/mannette.svg'">
+
+        <div class="nos_stream">
+            <div class="container">
+                <h2>NOS STREAMS</h2>
+                <div class="row">
+                    <div class="col">
+                        <iframe src="https://player.twitch.tv/?channel=orcusa2&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="actus">
+        <div class="faq">
             <div class="container">
-                <h1>Dernières Actus</h1>
+                <h2>FAQ</h2>
             </div>
-        </div> -->
+        </div>
     </div>
 </template>
+
+<script>
+   
+
+    export default {
+        data(){
+            return {
+
+            }
+        }
+    }
+</script>
