@@ -9,7 +9,7 @@
                         <p>Une association<br> pour soutenir les gamers sensibiliser et animer</p>
                     </div>
                     <span id="typed"></span>
-                    <i class="fas fa-chevron-down"></i>
+                    <a data-scroll href="#actus"><i class="fas fa-chevron-down"></i></a>
                     <section>
                         <a target="_blank" href="https://www.facebook.com/Orcusaasso/"><i class="fab fa-facebook-square"></i></a>
                         <a target="_blank" href="https://www.instagram.com/orcusa_off"><i class="fab fa-instagram"></i></a>
@@ -26,7 +26,7 @@
             </div>
         </div>
         
-        <div class="actus">
+        <div class="actus" id="actus">
             <div class="container">
                 <h2>Derniers Actus</h2>
                 <section>
@@ -49,6 +49,9 @@
         <div class="nos_stream">
             <div class="container">
                 <h2>NOS STREAMS</h2>
+                <p>
+
+                </p>
                 <div class="row">
                     <div class="col">
                         <iframe src="https://player.twitch.tv/?channel=orcusa2&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
@@ -57,9 +60,75 @@
             </div>
         </div>
 
-        <div class="faq">
+        <div class="partie_faq">
             <div class="container">
                 <h2>FAQ</h2>
+                <div class="faqs-container">
+                <div class="faq active">
+                    <h3 class="faq-title">
+                        Why shouldn't we trust atoms?
+                    </h3>
+                    <p class="faq-text">
+                        They make up everything.
+                    </p>
+                    <button class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="faq">
+                    <h3 class="faq-title">
+                        What do you call someone with no body and no nose?
+                    </h3>
+                    <p class="faq-text">
+                        Nobody knows.
+                    </p>
+                    <button class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="faq">
+                    <h3 class="faq-title">
+                        What's the object-oriented way to become wealthy?
+                    </h3>
+                    <p class="faq-text">
+                        Inheritance.
+                    </p>
+                    <button class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="faq">
+                    <h3 class="faq-title">
+                        How many tickles does it take to tickle an octopus?
+                    </h3>
+                    <p class="faq-text">
+                        Ten-tickles!
+                    </p>
+                    <button class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="faq">
+                    <h3 class="faq-title">
+                        What is: 1 + 1?
+                    </h3>
+                    <p class="faq-text">
+                        Depends on who are you asking.
+                    </p>
+                    <button class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -67,6 +136,7 @@
 
 <script>
    
+
 
     export default {
         data(){

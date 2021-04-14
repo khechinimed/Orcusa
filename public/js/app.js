@@ -1912,6 +1912,75 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -83875,27 +83944,27 @@ var render = function() {
           _vm._v(" "),
           _c("span", { attrs: { id: "typed" } }),
           _vm._v(" "),
-          _c("i", { staticClass: "fas fa-chevron-down" }),
+          _vm._m(1),
           _vm._v(" "),
-          _vm._m(1)
+          _vm._m(2)
         ]),
         _vm._v(" "),
-        _vm._m(2)
+        _vm._m(3)
       ])
     ]),
     _vm._v(" "),
-    _vm._m(3),
-    _vm._v(" "),
     _vm._m(4),
+    _vm._v(" "),
+    _vm._m(5),
     _vm._v(" "),
     _c("img", {
       staticClass: "mannette",
       attrs: { src: "/images/mannette.svg" }
     }),
     _vm._v(" "),
-    _vm._m(5),
+    _vm._m(6),
     _vm._v(" "),
-    _vm._m(6)
+    _vm._m(7)
   ])
 }
 var staticRenderFns = [
@@ -83909,6 +83978,14 @@ var staticRenderFns = [
         _c("br"),
         _vm._v(" pour soutenir les gamers sensibiliser et animer")
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { "data-scroll": "", href: "#actus" } }, [
+      _c("i", { staticClass: "fas fa-chevron-down" })
     ])
   },
   function() {
@@ -83969,7 +84046,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "actus" }, [
+    return _c("div", { staticClass: "actus", attrs: { id: "actus" } }, [
       _c("div", { staticClass: "container" }, [
         _c("h2", [_vm._v("Derniers Actus")]),
         _vm._v(" "),
@@ -84008,6 +84085,8 @@ var staticRenderFns = [
       _c("div", { staticClass: "container" }, [
         _c("h2", [_vm._v("NOS STREAMS")]),
         _vm._v(" "),
+        _c("p"),
+        _vm._v(" "),
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col" }, [
             _c("iframe", {
@@ -84030,8 +84109,104 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "faq" }, [
-      _c("div", { staticClass: "container" }, [_c("h2", [_vm._v("FAQ")])])
+    return _c("div", { staticClass: "partie_faq" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h2", [_vm._v("FAQ")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "faqs-container" }, [
+          _c("div", { staticClass: "faq active" }, [
+            _c("h3", { staticClass: "faq-title" }, [
+              _vm._v(
+                "\n                    Why shouldn't we trust atoms?\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "faq-text" }, [
+              _vm._v(
+                "\n                    They make up everything.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("button", { staticClass: "faq-toggle" }, [
+              _c("i", { staticClass: "fas fa-chevron-down" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "fas fa-times" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "faq" }, [
+            _c("h3", { staticClass: "faq-title" }, [
+              _vm._v(
+                "\n                    What do you call someone with no body and no nose?\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "faq-text" }, [
+              _vm._v("\n                    Nobody knows.\n                ")
+            ]),
+            _vm._v(" "),
+            _c("button", { staticClass: "faq-toggle" }, [
+              _c("i", { staticClass: "fas fa-chevron-down" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "fas fa-times" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "faq" }, [
+            _c("h3", { staticClass: "faq-title" }, [
+              _vm._v(
+                "\n                    What's the object-oriented way to become wealthy?\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "faq-text" }, [
+              _vm._v("\n                    Inheritance.\n                ")
+            ]),
+            _vm._v(" "),
+            _c("button", { staticClass: "faq-toggle" }, [
+              _c("i", { staticClass: "fas fa-chevron-down" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "fas fa-times" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "faq" }, [
+            _c("h3", { staticClass: "faq-title" }, [
+              _vm._v(
+                "\n                    How many tickles does it take to tickle an octopus?\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "faq-text" }, [
+              _vm._v("\n                    Ten-tickles!\n                ")
+            ]),
+            _vm._v(" "),
+            _c("button", { staticClass: "faq-toggle" }, [
+              _c("i", { staticClass: "fas fa-chevron-down" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "fas fa-times" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "faq" }, [
+            _c("h3", { staticClass: "faq-title" }, [
+              _vm._v("\n                    What is: 1 + 1?\n                ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "faq-text" }, [
+              _vm._v(
+                "\n                    Depends on who are you asking.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("button", { staticClass: "faq-toggle" }, [
+              _c("i", { staticClass: "fas fa-chevron-down" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "fas fa-times" })
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]

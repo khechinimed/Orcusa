@@ -37,4 +37,14 @@
         </div>
     </body>
     <script src="{{mix('/js/app.js')}}"></script>
+    
+    <script>
+        const toggles = document.querySelectorAll('.faq-toggle');
+
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                toggle.parentNode.classList.toggle('active');
+            });
+        });
+    </script>
 </html>
