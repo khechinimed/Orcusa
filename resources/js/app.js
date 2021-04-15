@@ -9,9 +9,14 @@ window.Vue = require('vue').default;
 
 
 Vue.component('navbar', require('./components/navbar.vue').default);
+Vue.component('foot', require('./components/footer.vue').default);
 Vue.use(ViewUI);
 
 const app = new Vue({
     el: '#app',
     router
+});
+
+const footer = new Vue({
+    el: '#footer'
 });

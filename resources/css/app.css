@@ -387,6 +387,89 @@ nav{
     }
     
 }
+/* Loading */
+.loading{
+    background-color: #ebebeb;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: #607D8B;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  .circle:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    transform: scale(0);
+    animation-name: dancing-circles;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  
+  .circle:hover:before {
+    animation-duration: 1s;
+  }
+  
+  .cut {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px #263238;
+  }
+  
+  .circle-2 {
+    position: absolute;
+    left: 50%; 
+    top: 50%;
+    background-color: red;
+    width: 100%;
+  }
+  
+  @keyframes dancing-circles {
+    0% {
+      transform: scale(0);
+      background-color: white;
+    }
+    
+    25% {
+      transform: scale(1);
+      background-color: #BDBDBD;
+    }
+    
+    50% {
+      transform: scale(0);
+      background-color: white;
+    }
+    
+    100% {
+      transform: scale(1);   
+      background-color: #424242;
+    }
+  }
+
 
 /*Footer*/
 .site-footer
