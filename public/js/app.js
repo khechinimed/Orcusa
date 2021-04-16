@@ -84210,11 +84210,237 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "association_banner" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("h2", [_vm._v("L'espoir vient du cœur")]),
-        _vm._v(" "),
-        _c("h3", [_vm._v("Orcusa vous souhaite la bienvenue")])
+    return _c("div", [
+      _c("div", { staticClass: "association_banner" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("h2", [_vm._v("L'espoir vient du cœur")]),
+          _vm._v(" "),
+          _c("h3", [_vm._v("Orcusa vous souhaite la bienvenue")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col" }, [
+              _c("p", [_vm._v("Président")]),
+              _vm._v(" "),
+              _c("p", [_vm._v("president@gmail.com")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col" }, [
+              _c("p", [_vm._v("Communication")]),
+              _vm._v(" "),
+              _c("p", [_vm._v("president@gmail.com")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col" }, [
+              _c("p", [_vm._v("Marketing")]),
+              _vm._v(" "),
+              _c("p", [_vm._v("marketing@gmail.com")])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "dirigeants" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("h2", [_vm._v("Nos Dirigeants")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3 col-sm-6" }, [
+                _c("div", { staticClass: "our-team" }, [
+                  _c("div", { staticClass: "pic" }, [
+                    _c("img", { attrs: { src: "images/user1.png" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "team-content" }, [
+                    _c("h3", { staticClass: "title" }, [
+                      _vm._v("Mathias Pora")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "post" }, [_vm._v("Président")])
+                  ]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "social" }, [
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-facebook",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-google-plus",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-instagram",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-linkedin",
+                        attrs: { href: "#" }
+                      })
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3 col-sm-6" }, [
+                _c("div", { staticClass: "our-team" }, [
+                  _c("div", { staticClass: "pic" }, [
+                    _c("img", { attrs: { src: "images/user2.png" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "team-content" }, [
+                    _c("h3", { staticClass: "title" }, [
+                      _vm._v("Pierre Otuszewski")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "post" }, [
+                      _vm._v("Vice-président")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "social" }, [
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-facebook",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-google-plus",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-instagram",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-linkedin",
+                        attrs: { href: "#" }
+                      })
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3 col-sm-6" }, [
+                _c("div", { staticClass: "our-team" }, [
+                  _c("div", { staticClass: "pic" }, [
+                    _c("img", { attrs: { src: "images/user1.png" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "team-content" }, [
+                    _c("h3", { staticClass: "title" }, [
+                      _vm._v("Mathias Pora")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "post" }, [_vm._v("Président")])
+                  ]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "social" }, [
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-facebook",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-google-plus",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-instagram",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-linkedin",
+                        attrs: { href: "#" }
+                      })
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3 col-sm-6" }, [
+                _c("div", { staticClass: "our-team" }, [
+                  _c("div", { staticClass: "pic" }, [
+                    _c("img", { attrs: { src: "images/user2.png" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "team-content" }, [
+                    _c("h3", { staticClass: "title" }, [
+                      _vm._v("Pierre Otuszewski")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "post" }, [
+                      _vm._v("Vice-président")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "social" }, [
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-facebook",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-google-plus",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-instagram",
+                        attrs: { href: "#" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", {
+                        staticClass: "fab fa-linkedin",
+                        attrs: { href: "#" }
+                      })
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "membres dirigeants" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("h2", [_vm._v("Membres de l'association")])
+        ])
       ])
     ])
   }

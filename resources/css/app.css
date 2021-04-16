@@ -321,10 +321,128 @@ nav{
 }
 .association_banner h3{
     font-family: 'Anton';
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: aliceblue;
     position: relative;
     top: 40vh;
+}
+.association_banner .row{
+    position: relative;
+    top: 40vh;
+}
+
+.association_banner .col{
+    color: white;
+    padding-top: 35px;
+    font-size: 15px;
+    font-family: 'Ubuntu';
+}
+.dirigeants{
+    padding-top: 65px;
+    padding-bottom: 50px;
+}
+
+.dirigeants h2{
+    font-family: 'Teko', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.our-team{
+    text-align: center;
+    position: relative;
+}
+.our-team:before{
+    content: "";
+    border: 4px solid #083d77;
+    opacity: 0;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    bottom: -7px;
+    right: -7px;
+    transform: scale(1.03);
+    transition: all 0.6s ease 0s;
+}
+.our-team:hover:before{
+    opacity: 1;
+    transform: scale(1);
+}
+.our-team .pic{ position: relative; }
+.our-team .pic:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+}
+.our-team:hover .pic:before{ opacity: 1; }
+.our-team img{
+    width: 100%;
+    height: auto;
+}
+.our-team .team-content{
+    padding: 30px 0 20px;
+    position: relative;
+    top: 0;
+    transition: all 0.6s ease 0s;
+}
+.our-team:hover .team-content{ top: -50%; }
+.our-team .title{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 7px 0;
+    transition: all 0.6s ease 0s;
+}
+.our-team:hover .title{ color: #fff; }
+.our-team .post{
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    color: #707070;
+    text-transform: capitalize;
+    transition: all 0.6s ease 0s;
+}
+.our-team:hover .post{ color: #a5a267; }
+.our-team .social{
+    width: 100%;
+    padding: 0;
+    margin: 0 0 30px;
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.6s ease 0s;
+}
+.our-team:hover .social{
+    opacity: 1;
+    transform: scale(1);
+}
+.our-team .social li{ display: inline-block; }
+.our-team .social li a{
+    display: block;
+    padding: 0 15px;
+    font-size: 18px;
+    color: #083d77;
+    border-right: 1px solid #083d77;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.our-team .social li a:hover{ color: #a5a267; }
+.our-team .social li:last-child a{ border-right: none; }
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
 }
 
 /*Responsivity*/
