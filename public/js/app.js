@@ -1834,6 +1834,162 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/association.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/association.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      data: {
+        members: 8
+      }
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/home.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/home.vue?vue&type=script&lang=js& ***!
@@ -83622,15 +83778,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _association_vue_vue_type_template_id_2b4fd4fb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./association.vue?vue&type=template&id=2b4fd4fb& */ "./resources/js/components/pages/association.vue?vue&type=template&id=2b4fd4fb&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _association_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./association.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/association.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _association_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _association_vue_vue_type_template_id_2b4fd4fb___WEBPACK_IMPORTED_MODULE_0__.render,
   _association_vue_vue_type_template_id_2b4fd4fb___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -83683,6 +83841,22 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 if (false) { var api; }
 component.options.__file = "resources/js/components/pages/home.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/association.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/pages/association.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_association_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./association.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/association.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_association_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -84203,244 +84377,291 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c("div", { staticClass: "membres dirigeants" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h2", [_vm._v("Membres de l'association")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "div",
+            { staticClass: "row" },
+            _vm._l(_vm.data.members, function(member) {
+              return _c(
+                "div",
+                { key: member, staticClass: "col-md-3 col-sm-6" },
+                [_vm._m(2, true)]
+              )
+            }),
+            0
+          )
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _vm._m(3)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "association_banner" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("h2", [_vm._v("L'espoir vient du cœur")]),
-          _vm._v(" "),
-          _c("h3", [_vm._v("Orcusa vous souhaite la bienvenue")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col" }, [
-              _c("p", [_vm._v("Président")]),
-              _vm._v(" "),
-              _c("p", [_vm._v("president@gmail.com")])
-            ]),
+    return _c("div", { staticClass: "association_banner" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h2", [_vm._v("L'espoir vient du cœur")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Orcusa vous souhaite la bienvenue")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col" }, [
+            _c("p", [_vm._v("Président")]),
             _vm._v(" "),
-            _c("div", { staticClass: "col" }, [
-              _c("p", [_vm._v("Communication")]),
-              _vm._v(" "),
-              _c("p", [_vm._v("president@gmail.com")])
-            ]),
+            _c("p", [_vm._v("president@gmail.com")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("p", [_vm._v("Communication")]),
             _vm._v(" "),
-            _c("div", { staticClass: "col" }, [
-              _c("p", [_vm._v("Marketing")]),
-              _vm._v(" "),
-              _c("p", [_vm._v("marketing@gmail.com")])
-            ])
+            _c("p", [_vm._v("president@gmail.com")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("p", [_vm._v("Marketing")]),
+            _vm._v(" "),
+            _c("p", [_vm._v("marketing@gmail.com")])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "dirigeants" }, [
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dirigeants" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h2", [_vm._v("Nos Dirigeants")]),
+        _vm._v(" "),
         _c("div", { staticClass: "container" }, [
-          _c("h2", [_vm._v("Nos Dirigeants")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-3 col-sm-6" }, [
-                _c("div", { staticClass: "our-team" }, [
-                  _c("div", { staticClass: "pic" }, [
-                    _c("img", { attrs: { src: "images/user1.png" } })
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-3 col-sm-6" }, [
+              _c("div", { staticClass: "our-team" }, [
+                _c("div", { staticClass: "pic" }, [
+                  _c("img", { attrs: { src: "images/user1.png" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "team-content" }, [
+                  _c("h3", { staticClass: "title" }, [_vm._v("Mathias Pora")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "post" }, [_vm._v("Président")])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "social" }, [
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-facebook",
+                      attrs: { href: "#" }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "team-content" }, [
-                    _c("h3", { staticClass: "title" }, [
-                      _vm._v("Mathias Pora")
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "post" }, [_vm._v("Président")])
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-google-plus",
+                      attrs: { href: "#" }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("ul", { staticClass: "social" }, [
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-facebook",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-google-plus",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-instagram",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-linkedin",
-                        attrs: { href: "#" }
-                      })
-                    ])
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-instagram",
+                      attrs: { href: "#" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-linkedin",
+                      attrs: { href: "#" }
+                    })
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-3 col-sm-6" }, [
-                _c("div", { staticClass: "our-team" }, [
-                  _c("div", { staticClass: "pic" }, [
-                    _c("img", { attrs: { src: "images/user2.png" } })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-3 col-sm-6" }, [
+              _c("div", { staticClass: "our-team" }, [
+                _c("div", { staticClass: "pic" }, [
+                  _c("img", { attrs: { src: "images/user2.png" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "team-content" }, [
+                  _c("h3", { staticClass: "title" }, [
+                    _vm._v("Pierre Otuszewski")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "team-content" }, [
-                    _c("h3", { staticClass: "title" }, [
-                      _vm._v("Pierre Otuszewski")
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "post" }, [
-                      _vm._v("Vice-président")
-                    ])
+                  _c("span", { staticClass: "post" }, [
+                    _vm._v("Vice-président")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "social" }, [
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-facebook",
+                      attrs: { href: "#" }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("ul", { staticClass: "social" }, [
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-facebook",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-google-plus",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-instagram",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-linkedin",
-                        attrs: { href: "#" }
-                      })
-                    ])
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-google-plus",
+                      attrs: { href: "#" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-instagram",
+                      attrs: { href: "#" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-linkedin",
+                      attrs: { href: "#" }
+                    })
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-3 col-sm-6" }, [
-                _c("div", { staticClass: "our-team" }, [
-                  _c("div", { staticClass: "pic" }, [
-                    _c("img", { attrs: { src: "images/user1.png" } })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-3 col-sm-6" }, [
+              _c("div", { staticClass: "our-team" }, [
+                _c("div", { staticClass: "pic" }, [
+                  _c("img", { attrs: { src: "images/user1.png" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "team-content" }, [
+                  _c("h3", { staticClass: "title" }, [_vm._v("Mathias Pora")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "post" }, [_vm._v("Président")])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "social" }, [
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-facebook",
+                      attrs: { href: "#" }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "team-content" }, [
-                    _c("h3", { staticClass: "title" }, [
-                      _vm._v("Mathias Pora")
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "post" }, [_vm._v("Président")])
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-google-plus",
+                      attrs: { href: "#" }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("ul", { staticClass: "social" }, [
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-facebook",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-google-plus",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-instagram",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-linkedin",
-                        attrs: { href: "#" }
-                      })
-                    ])
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-instagram",
+                      attrs: { href: "#" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-linkedin",
+                      attrs: { href: "#" }
+                    })
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-3 col-sm-6" }, [
-                _c("div", { staticClass: "our-team" }, [
-                  _c("div", { staticClass: "pic" }, [
-                    _c("img", { attrs: { src: "images/user2.png" } })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-3 col-sm-6" }, [
+              _c("div", { staticClass: "our-team" }, [
+                _c("div", { staticClass: "pic" }, [
+                  _c("img", { attrs: { src: "images/user2.png" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "team-content" }, [
+                  _c("h3", { staticClass: "title" }, [
+                    _vm._v("Pierre Otuszewski")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "team-content" }, [
-                    _c("h3", { staticClass: "title" }, [
-                      _vm._v("Pierre Otuszewski")
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "post" }, [
-                      _vm._v("Vice-président")
-                    ])
+                  _c("span", { staticClass: "post" }, [
+                    _vm._v("Vice-président")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "social" }, [
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-facebook",
+                      attrs: { href: "#" }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("ul", { staticClass: "social" }, [
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-facebook",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-google-plus",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-instagram",
-                        attrs: { href: "#" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", {
-                        staticClass: "fab fa-linkedin",
-                        attrs: { href: "#" }
-                      })
-                    ])
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-google-plus",
+                      attrs: { href: "#" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-instagram",
+                      attrs: { href: "#" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-linkedin",
+                      attrs: { href: "#" }
+                    })
                   ])
                 ])
               ])
             ])
           ])
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "our-team" }, [
+      _c("div", { staticClass: "pic" }, [
+        _c("img", { attrs: { src: "images/user1.png" } })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "membres dirigeants" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("h2", [_vm._v("Membres de l'association")])
-        ])
+      _c("div", { staticClass: "team-content" }, [
+        _c("h3", { staticClass: "title" }, [_vm._v("Mathias Pora")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "partenaire" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h2", [_vm._v("Nos partenaires")])
       ])
     ])
   }

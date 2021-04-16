@@ -100,12 +100,45 @@
             </div>
             
         </div>
-
+        <hr>
         <div class="membres dirigeants">
             <div class="container">
                 <h2>Membres de l'association</h2>
+
+                <div class="container">
+                    <div class="row">
+                        <div v-for="member in data.members" :key="member" class="col-md-3 col-sm-6">
+                            <div class="our-team">
+                                <div class="pic">
+                                    <img src="images/user1.png">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="title">Mathias Pora</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <hr>
+
+        <div class="partenaire">
+            <div class="container">
+                <h2>Nos partenaires</h2>
             </div>
-            
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            data: {
+                members: 8
+            }
+        }
+    }
+}
+</script>
