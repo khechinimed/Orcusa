@@ -5,6 +5,8 @@ Vue.use(Router)
 
 import home from './components/pages/home'
 import association from './components/pages/association'
+import events from './components/pages/events'
+import donation from './components/pages/donation'
 
 const routes = [
     //Project routes
@@ -16,6 +18,14 @@ const routes = [
     {
         path: '/association',
         component: association
+    },
+    {
+        path: '/evenements',
+        component: events
+    },
+    {
+        path: '/donation',
+        component: donation
     }
 ]
 

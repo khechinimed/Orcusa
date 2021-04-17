@@ -9,8 +9,6 @@
 .container-lg,
 .container-md,
 .container-sm {
-  margin-right: 2% !important;
-  margin-left: 2% !important;
   background-color: transparent;
 }
 
@@ -471,6 +469,72 @@ nav{
     padding-bottom: 5%;
 }
 
+/*Donation*/
+
+.donation_banner{
+    width: 100%;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-image: url(/images/don.jpg);
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    padding-top: 3%;
+}
+
+.donation_banner h2, h3{
+    text-align: center;
+    color: #2d2d2d;
+}
+.donation_banner h2{
+    font-family: 'Teko';
+    font-size: 6rem;
+}
+
+.donation_banner h3{
+    font-family: 'Shadows Into Light';
+    font-size: 6rem;
+}
+
+.donation_banner .options{
+    padding-top: 2%;
+}
+
+.donation_banner .options .adherant span{
+    color: #D5D29D;
+    font-family: 'Anton';
+    font-size: 1.3rem;
+    background-color: #2D373C;
+    padding: 54px 100px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.donation_banner .options .adherant Button {
+    float: left;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.donation_banner .options .don Button{
+    float: right;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.donation_banner .options .don span{
+    color: #2D373C;
+    font-family: 'Anton';
+    font-size: 1.3rem;
+    background-color: #D5D29D;
+    padding: 54px 100px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+
 /*Responsivity*/
 
 @media (max-width: 768px) {
@@ -499,6 +563,27 @@ nav{
     }
     .association_banner h3{
         font-size: 1rem;
+    }
+
+    .donation_banner h2{
+        font-family: 'Teko';
+        font-size: 3rem;
+    }
+    
+    .donation_banner h3{
+        font-family: 'Shadows Into Light';
+        font-size: 3rem;
+    }
+
+    .donation_banner .options .don span {
+        margin-top: 70%;
+        font-size: 1rem;
+        padding: 40px 80px;
+    }
+    .donation_banner .options .adherant span {
+        margin-top: 25%;
+        font-size: 1rem;
+        padding: 40px 80px;
     }
 
 }

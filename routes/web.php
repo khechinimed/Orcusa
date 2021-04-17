@@ -22,3 +22,11 @@ Auth::routes();
 Route::get('/association', function () {
     return view('welcome');
 });
+
+Route::get('/evenements', function () {
+    return view('welcome');
+});
+
+Route::get('/donation', function () {
+    return view('welcome');
+});
