@@ -5,11 +5,11 @@
             <h3>Ayez un impact</h3>
             <div class="options">
                 <section class="adherant">
-                    <Button @click="modal1 = true">Display dialog box</Button>
+                    <Button @click="modal1 = true">Devenir adhérent</Button>
                 </section>
                 <Modal
                     v-model="modal1"
-                    title="Common Modal dialog box title"
+                    title="Devenir adhérent"
                 >
                     <p>Content of dialog</p>
                     <p>Content of dialog</p>
@@ -20,11 +20,11 @@
                     </div>
                 </Modal>
                 <section class="don">
-                    <Button @click="modal1 = true">Display dialog box</Button>
+                    <Button @click="modal1 = true">Faire un Don</Button>
                 </section>
                 <Modal
                     v-model="modal1"
-                    title="Common Modal dialog box title"
+                    title="Faire un Don"
                 >
                     <p>Content of dialog</p>
                     <p>Content of dialog</p>

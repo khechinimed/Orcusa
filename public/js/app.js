@@ -84912,7 +84912,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("Display dialog box")]
+                [_vm._v("Devenir adhérent")]
               )
             ],
             1
@@ -84921,7 +84921,7 @@ var render = function() {
           _c(
             "Modal",
             {
-              attrs: { title: "Common Modal dialog box title" },
+              attrs: { title: "Devenir adhérent" },
               model: {
                 value: _vm.modal1,
                 callback: function($$v) {
@@ -84976,7 +84976,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("Display dialog box")]
+                [_vm._v("Faire un Don")]
               )
             ],
             1
@@ -84985,7 +84985,7 @@ var render = function() {
           _c(
             "Modal",
             {
-              attrs: { title: "Common Modal dialog box title" },
+              attrs: { title: "Faire un Don" },
               model: {
                 value: _vm.modal1,
                 callback: function($$v) {

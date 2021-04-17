@@ -11268,6 +11268,7 @@ nav{
     color: aliceblue;
     position: relative;
     top: 40vh;
+    text-align: start;
 }
 .association_banner .row{
     position: relative;
@@ -11455,6 +11456,14 @@ nav{
     border-bottom-right-radius: 15px;
 }
 
+.donation_banner .options .adherant span:hover{
+    padding: 70px 120px;
+    transition: all .4s ease-in-out;
+    
+    /* animation-name: buttonZoom;
+  	animation-duration: .8s; */
+}
+
 .donation_banner .options .adherant Button {
     float: left;
     background: transparent;
@@ -11479,6 +11488,23 @@ nav{
     border-bottom-left-radius: 15px;
 }
 
+.donation_banner .options .don span:hover{
+    padding: 70px 120px;
+    transition: all .4s ease-in-out;
+    
+    /* animation-name: buttonZoom;
+  	animation-duration: .8s; */
+}
+
+/* Animation */
+@-webkit-keyframes buttonZoom {
+    0%   {}
+    100% {padding: 70px 120px;}
+}
+@keyframes buttonZoom {
+    0%   {}
+    100% {padding: 70px 120px;}
+}
 
 /*Responsivity*/
 
