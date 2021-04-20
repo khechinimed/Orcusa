@@ -7,8 +7,34 @@
             <div class="contact-form">
                  <div class="row">
                     <div class="formulaire col-md-8">
-                        <form action="">
-                            formulaire
+                        <form class="form row">
+                            <div class="form-field col x-50">
+                                <input id="name" class="input-text js-input" type="text" required>
+                                <label class="label" for="name">Name</label>
+                            </div>
+                            <div class="form-field col x-50">
+                                <input id="email" class="input-text js-input" type="email" required>
+                                <label class="label" for="email">E-mail</label>
+                            </div>
+                            <div class="form-field col x-50">
+                                <input id="email" class="input-text js-input" type="email" required>
+                                <label class="label" for="email">Phone</label>
+                            </div>
+                            <div class="form-field col x-50">                
+                                <select name="" id="">
+                                    <option value="rdv">Prise de rdv</option>
+                                    <option value="adherent">Devenir adhérent</option>
+                                    <option value="benevole">Devenir bénévole</option>
+                                </select>
+                                <label class="label" for="email">Demande concerne</label>
+                            </div>
+                            <div class="form-field col x-100">
+                                <input id="message" class="input-text js-input" type="text" required>
+                                <label class="label" for="message">Message</label>
+                            </div>
+                            <div class="form-field col x-50 align-center">
+                                <input class="submit-btn" type="submit" value="Submit">
+                            </div>
                         </form>
                     </div>
                     <div class="infos col-6 col-md-4">

@@ -85137,8 +85137,75 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "formulaire col-md-8" }, [
-      _c("form", { attrs: { action: "" } }, [
-        _vm._v("\n                        formulaire\n                    ")
+      _c("form", { staticClass: "form row" }, [
+        _c("div", { staticClass: "form-field col x-50" }, [
+          _c("input", {
+            staticClass: "input-text js-input",
+            attrs: { id: "name", type: "text", required: "" }
+          }),
+          _vm._v(" "),
+          _c("label", { staticClass: "label", attrs: { for: "name" } }, [
+            _vm._v("Name")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-field col x-50" }, [
+          _c("input", {
+            staticClass: "input-text js-input",
+            attrs: { id: "email", type: "email", required: "" }
+          }),
+          _vm._v(" "),
+          _c("label", { staticClass: "label", attrs: { for: "email" } }, [
+            _vm._v("E-mail")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-field col x-50" }, [
+          _c("input", {
+            staticClass: "input-text js-input",
+            attrs: { id: "email", type: "email", required: "" }
+          }),
+          _vm._v(" "),
+          _c("label", { staticClass: "label", attrs: { for: "email" } }, [
+            _vm._v("Phone")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-field col x-50" }, [
+          _c("select", { attrs: { name: "", id: "" } }, [
+            _c("option", { attrs: { value: "rdv" } }, [_vm._v("Prise de rdv")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "adherent" } }, [
+              _vm._v("Devenir adhérent")
+            ]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "benevole" } }, [
+              _vm._v("Devenir bénévole")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("label", { staticClass: "label", attrs: { for: "email" } }, [
+            _vm._v("Demande concerne")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-field col x-100" }, [
+          _c("input", {
+            staticClass: "input-text js-input",
+            attrs: { id: "message", type: "text", required: "" }
+          }),
+          _vm._v(" "),
+          _c("label", { staticClass: "label", attrs: { for: "message" } }, [
+            _vm._v("Message")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-field col x-50 align-center" }, [
+          _c("input", {
+            staticClass: "submit-btn",
+            attrs: { type: "submit", value: "Submit" }
+          })
+        ])
       ])
     ])
   },
