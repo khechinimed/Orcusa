@@ -19,14 +19,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/association', function () {
-    return view('welcome');
-});
+Route::get('/association', function () { return view('welcome'); });
 
-Route::get('/evenements', function () {
-    return view('welcome');
-});
+Route::get('/evenements', function () { return view('welcome'); });
 
-Route::get('/donation', function () {
-    return view('welcome');
-});
+Route::get('/donation', function () { return view('welcome'); });
+
+Route::get('/stream', function () { return view('welcome'); });
+
+Route::get('/forum', function () { return view('welcome'); });
+
+Route::get('/contact', function () { return view('welcome'); });

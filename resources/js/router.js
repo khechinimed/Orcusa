@@ -7,6 +7,9 @@ import home from './components/pages/home'
 import association from './components/pages/association'
 import events from './components/pages/events'
 import donation from './components/pages/donation'
+import stream from './components/pages/stream'
+import forum from './components/pages/forum'
+import contact from './components/pages/contact'
 
 const routes = [
     //Project routes
@@ -26,6 +29,18 @@ const routes = [
     {
         path: '/donation',
         component: donation
+    },
+    {
+        path: '/stream',
+        component: stream
+    },
+    {
+        path: '/forum',
+        component:  forum
+    },
+    {
+        path: '/contact',
+        component:  contact
     }
 ]
 
