@@ -9,15 +9,15 @@
                     <div class="formulaire col-md-8">
                         <form class="form">
                             <div class="form-field col x-50">
-                                <input id="name" class="input-text" type="text" required>
-                                <label class="label" for="name">Name</label>
+                                <input  id="name" class="input-text" type="text" autocomplete="off" required>
+                                <label class="label" for="name">Nom complet</label>
                             </div>
                             <div class="form-field col x-50">
-                                <input id="email" class="input-text" type="email" required>
+                                <input id="email" class="input-text" type="email" autocomplete="off" required>
                                 <label class="label" for="email">E-mail</label>
                             </div>
                             <div class="form-field col x-50">
-                                <input id="email" class="input-text" type="email" required>
+                                <input id="email" class="input-text" type="email" autocomplete="off" required>
                                 <label class="label" for="email">Phone</label>
                             </div>
                             <div class="form-field select col x-50">                
@@ -29,8 +29,8 @@
                                 </select>
                                 <label class="label" for="email">Demande concerne</label>
                             </div>
-                            <div class="form-field col x-100">
-                                <input id="message" class="input-text" type="text" required>
+                            <div class="form-field textarea col x-100">
+                                <textarea id="message" class="input-text" cols="60" rows="20" maxlength="300" type="text" autocomplete="off" required></textarea>
                                 <label class="label" for="message">Message</label>
                             </div>
                             <div class="form-field col x-50 align-center">

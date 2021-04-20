@@ -85143,18 +85143,28 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-field col x-50" }, [
           _c("input", {
             staticClass: "input-text",
-            attrs: { id: "name", type: "text", required: "" }
+            attrs: {
+              id: "name",
+              type: "text",
+              autocomplete: "off",
+              required: ""
+            }
           }),
           _vm._v(" "),
           _c("label", { staticClass: "label", attrs: { for: "name" } }, [
-            _vm._v("Name")
+            _vm._v("Nom complet")
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "form-field col x-50" }, [
           _c("input", {
             staticClass: "input-text",
-            attrs: { id: "email", type: "email", required: "" }
+            attrs: {
+              id: "email",
+              type: "email",
+              autocomplete: "off",
+              required: ""
+            }
           }),
           _vm._v(" "),
           _c("label", { staticClass: "label", attrs: { for: "email" } }, [
@@ -85165,7 +85175,12 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-field col x-50" }, [
           _c("input", {
             staticClass: "input-text",
-            attrs: { id: "email", type: "email", required: "" }
+            attrs: {
+              id: "email",
+              type: "email",
+              autocomplete: "off",
+              required: ""
+            }
           }),
           _vm._v(" "),
           _c("label", { staticClass: "label", attrs: { for: "email" } }, [
@@ -85193,10 +85208,18 @@ var staticRenderFns = [
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-field col x-100" }, [
-          _c("input", {
+        _c("div", { staticClass: "form-field textarea col x-100" }, [
+          _c("textarea", {
             staticClass: "input-text",
-            attrs: { id: "message", type: "text", required: "" }
+            attrs: {
+              id: "message",
+              cols: "60",
+              rows: "20",
+              maxlength: "300",
+              type: "text",
+              autocomplete: "off",
+              required: ""
+            }
           }),
           _vm._v(" "),
           _c("label", { staticClass: "label", attrs: { for: "message" } }, [

@@ -11641,6 +11641,14 @@ nav{
     font-weight: 400;
 }
 
+.form-field textarea{
+    resize: none;
+    background-color: transparent;
+}
+.textarea .label{
+    bottom: 35px !important;
+}
+
 .form-field .input-text:focus{
     outline: none;
 }
