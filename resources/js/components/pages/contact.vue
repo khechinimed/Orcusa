@@ -4,36 +4,37 @@
             <h2>Contactez-nous</h2>
             <h3>Pour toute question ou remarque, écrivez-nous un message.</h3>
 
-            <div class="contact-form">
+            <div class="contact-form shadow">
                  <div class="row">
                     <div class="formulaire col-md-8">
-                        <form class="form row">
+                        <form class="form">
                             <div class="form-field col x-50">
-                                <input id="name" class="input-text js-input" type="text" required>
+                                <input id="name" class="input-text" type="text" required>
                                 <label class="label" for="name">Name</label>
                             </div>
                             <div class="form-field col x-50">
-                                <input id="email" class="input-text js-input" type="email" required>
+                                <input id="email" class="input-text" type="email" required>
                                 <label class="label" for="email">E-mail</label>
                             </div>
                             <div class="form-field col x-50">
-                                <input id="email" class="input-text js-input" type="email" required>
+                                <input id="email" class="input-text" type="email" required>
                                 <label class="label" for="email">Phone</label>
                             </div>
-                            <div class="form-field col x-50">                
-                                <select name="" id="">
+                            <div class="form-field select col x-50">                
+                                <select name="demande" id="demande">
                                     <option value="rdv">Prise de rdv</option>
                                     <option value="adherent">Devenir adhérent</option>
                                     <option value="benevole">Devenir bénévole</option>
+                                    <option value="autre">Autre</option>
                                 </select>
                                 <label class="label" for="email">Demande concerne</label>
                             </div>
                             <div class="form-field col x-100">
-                                <input id="message" class="input-text js-input" type="text" required>
+                                <input id="message" class="input-text" type="text" required>
                                 <label class="label" for="message">Message</label>
                             </div>
                             <div class="form-field col x-50 align-center">
-                                <input class="submit-btn" type="submit" value="Submit">
+                                <input class="submit-btn" type="submit" value="Envoyer">
                             </div>
                         </form>
                     </div>
@@ -49,6 +50,13 @@
                     </div>
                 </div>
             </div>
+            <section class="social-media">
+                <a target="_blank" href="https://www.facebook.com/Orcusaasso/"><i class="fab fa-facebook-square"></i></a>
+                <a target="_blank" href="https://www.instagram.com/orcusa_off"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://twitter.com/Orcusa2"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://discord.gg/E6Ht7Yxn"><i class="fab fa-discord"></i></a>
+                <a target="_blank" href="https://www.twitch.tv/orcusa2"><i class="fab fa-twitch"></i></a>
+            </section>
         </div>
     </div>
 </template>

@@ -85103,7 +85103,7 @@ var render = function() {
         _vm._v("Pour toute question ou remarque, écrivez-nous un message.")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "contact-form" }, [
+      _c("div", { staticClass: "contact-form shadow" }, [
         _c("div", { staticClass: "row" }, [
           _vm._m(0),
           _vm._v(" "),
@@ -85127,7 +85127,9 @@ var render = function() {
             ])
           ])
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _vm._m(4)
     ])
   ])
 }
@@ -85137,10 +85139,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "formulaire col-md-8" }, [
-      _c("form", { staticClass: "form row" }, [
+      _c("form", { staticClass: "form" }, [
         _c("div", { staticClass: "form-field col x-50" }, [
           _c("input", {
-            staticClass: "input-text js-input",
+            staticClass: "input-text",
             attrs: { id: "name", type: "text", required: "" }
           }),
           _vm._v(" "),
@@ -85151,7 +85153,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "form-field col x-50" }, [
           _c("input", {
-            staticClass: "input-text js-input",
+            staticClass: "input-text",
             attrs: { id: "email", type: "email", required: "" }
           }),
           _vm._v(" "),
@@ -85162,7 +85164,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "form-field col x-50" }, [
           _c("input", {
-            staticClass: "input-text js-input",
+            staticClass: "input-text",
             attrs: { id: "email", type: "email", required: "" }
           }),
           _vm._v(" "),
@@ -85171,8 +85173,8 @@ var staticRenderFns = [
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-field col x-50" }, [
-          _c("select", { attrs: { name: "", id: "" } }, [
+        _c("div", { staticClass: "form-field select col x-50" }, [
+          _c("select", { attrs: { name: "demande", id: "demande" } }, [
             _c("option", { attrs: { value: "rdv" } }, [_vm._v("Prise de rdv")]),
             _vm._v(" "),
             _c("option", { attrs: { value: "adherent" } }, [
@@ -85181,7 +85183,9 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("option", { attrs: { value: "benevole" } }, [
               _vm._v("Devenir bénévole")
-            ])
+            ]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "autre" } }, [_vm._v("Autre")])
           ]),
           _vm._v(" "),
           _c("label", { staticClass: "label", attrs: { for: "email" } }, [
@@ -85191,7 +85195,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "form-field col x-100" }, [
           _c("input", {
-            staticClass: "input-text js-input",
+            staticClass: "input-text",
             attrs: { id: "message", type: "text", required: "" }
           }),
           _vm._v(" "),
@@ -85203,7 +85207,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-field col x-50 align-center" }, [
           _c("input", {
             staticClass: "submit-btn",
-            attrs: { type: "submit", value: "Submit" }
+            attrs: { type: "submit", value: "Envoyer" }
           })
         ])
       ])
@@ -85234,6 +85238,52 @@ var staticRenderFns = [
     return _c("span", [
       _c("i", { staticClass: "fas fa-location-arrow" }),
       _vm._v("ORCUSA, France")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "social-media" }, [
+      _c(
+        "a",
+        {
+          attrs: {
+            target: "_blank",
+            href: "https://www.facebook.com/Orcusaasso/"
+          }
+        },
+        [_c("i", { staticClass: "fab fa-facebook-square" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          attrs: {
+            target: "_blank",
+            href: "https://www.instagram.com/orcusa_off"
+          }
+        },
+        [_c("i", { staticClass: "fab fa-instagram" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { attrs: { target: "_blank", href: "https://twitter.com/Orcusa2" } },
+        [_c("i", { staticClass: "fab fa-twitter" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { attrs: { target: "_blank", href: "https://discord.gg/E6Ht7Yxn" } },
+        [_c("i", { staticClass: "fab fa-discord" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { attrs: { target: "_blank", href: "https://www.twitch.tv/orcusa2" } },
+        [_c("i", { staticClass: "fab fa-twitch" })]
+      )
     ])
   }
 ]
