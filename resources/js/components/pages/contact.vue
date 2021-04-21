@@ -7,34 +7,34 @@
             <div class="contact-form shadow">
                  <div class="row">
                     <div class="formulaire col-md-8">
-                        <form class="form">
+                        <form class="form" @submit.prevent="sendContact">
                             <div class="form-field col x-50">
-                                <input  id="name" class="input-text" type="text" autocomplete="off" required>
+                                <input id="name" v-model="form.name" class="input-text" type="text" autocomplete="off" required>
                                 <label class="label" for="name">Nom complet</label>
                             </div>
                             <div class="form-field col x-50">
-                                <input id="email" class="input-text" type="email" autocomplete="off" required>
+                                <input id="email" v-model="form.email" class="input-text" type="email" autocomplete="off" required>
                                 <label class="label" for="email">E-mail</label>
                             </div>
                             <div class="form-field col x-50">
-                                <input id="email" class="input-text" type="email" autocomplete="off" required>
+                                <input id="email" class="input-text" v-model="form.phone" type="tel" autocomplete="off" required>
                                 <label class="label" for="email">Phone</label>
                             </div>
                             <div class="form-field select col x-50">                
-                                <select name="demande" id="demande">
-                                    <option value="rdv">Prise de rdv</option>
-                                    <option value="adherent">Devenir adhérent</option>
-                                    <option value="benevole">Devenir bénévole</option>
-                                    <option value="autre">Autre</option>
+                                <select name="demande" v-model="form.demande" id="demande" required>
+                                    <option value="Rendez-vous">Prise de rdv</option>
+                                    <option value="Devenir Adherent">Devenir adhérent</option>
+                                    <option value="Devenir Benevole">Devenir bénévole</option>
+                                    <option value="Autre">Autre</option>
                                 </select>
-                                <label class="label" for="email">Demande concerne</label>
+                                <label class="label" for="demande">Demande concerne</label>
                             </div>
                             <div class="form-field textarea col x-100">
-                                <textarea id="message" class="input-text" cols="60" rows="20" maxlength="300" type="text" autocomplete="off" required></textarea>
+                                <textarea id="message" class="input-text" v-model="form.message" cols="60" rows="20" maxlength="300" type="text" autocomplete="off" required></textarea>
                                 <label class="label" for="message">Message</label>
                             </div>
                             <div class="form-field col x-50 align-center">
-                                <input class="submit-btn" type="submit" value="Envoyer">
+                                <button class="submit-btn" type="submit">Envoyer</button>
                             </div>
                         </form>
                     </div>
@@ -60,3 +60,44 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            form: {
+                name: '',
+                email: '',
+                phone: '',
+                demande: '',
+                message: ''
+            },
+        }
+    },
+
+    methods: {
+        async sendContact(){
+
+            const res = await this.callApi('post', '/api/send-contact', this.form);
+
+            if(res.status === 200){
+				this.s('Votre Message a bien été envoyé!')
+			}else{
+				if(res.status == 422){
+					this.swr()
+				}
+                this.swr()
+			}
+
+            this.clearForm();
+        },
+        clearForm(){
+            this.form.name = '';
+            this.form.email = '';
+            this.form.phone = '';
+            this.form.demande = '';
+            this.form.message = '';
+        }
+    }
+}
+</script>
