@@ -7,6 +7,8 @@ import Vue from 'vue';
 import router from './router';
 window.Vue = require('vue').default;
 
+import common from './common';
+Vue.mixin(common);
 
 Vue.component('navbar', require('./components/navbar.vue').default);
 Vue.component('foot', require('./components/footer.vue').default);
