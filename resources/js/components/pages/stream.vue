@@ -1,5 +1,9 @@
 <template>
-    <div>
-        <h1>STREAM</h1>
+    <div class="stream-page">
+        <div class="container">
+            <h2>STREAM</h2>
+
+
+        </div>
     </div>
 </template>
