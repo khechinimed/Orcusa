@@ -2,21 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Mail\ContactMail;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
     //
-    public function send(Request $request){
-        $details = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'demande' => $request->demande,
-            'message' => $request->message
-        ];
+    public function send(ContactRequest $request){
+        $details = $request->validated();
 
         Mail::to('khechinibakr20@gmail.com')->send(new ContactMail($details));
     }

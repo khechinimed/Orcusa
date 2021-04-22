@@ -87055,7 +87055,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("STREAM")])])
+    return _c("div", { staticClass: "stream-page" }, [
+      _c("div", { staticClass: "container" }, [_c("h2", [_vm._v("STREAM")])])
+    ])
   }
 ]
 render._withStripped = true

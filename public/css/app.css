@@ -11716,6 +11716,22 @@ nav{
     padding-top: 5px;
     font-size: 2rem;
 }
+
+/*STREAM PAGE*/
+.stream-page{
+    margin-top: 2%;
+}
+
+.stream-page h2{
+    font-family: 'Teko';
+    font-size: 4rem;
+}
+
+.stream-page h2,h3{
+    text-align: center;
+    color: #2d2d2d;
+}
+
 /* Animation */
 @-webkit-keyframes buttonZoom {
     0%   {}
