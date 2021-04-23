@@ -126,6 +126,7 @@
         <div class="partenaire">
             <div class="container">
                 <h2>Nos partenaires</h2>
+                <h3>Ils nous font confiance, et nous aussi !</h3>
             </div>
         </div>
     </div>

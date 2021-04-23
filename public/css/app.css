@@ -11415,7 +11415,12 @@ nav{
     font-family: 'Teko', sans-serif;
     font-size: 4rem;
     text-align: center;
-    padding-bottom: 5%;
+}
+
+.partenaire h3{
+    font-family: 'Shadows Into Light';
+    font-size: 2.5rem;
+    padding-bottom: 3%;
 }
 
 /*Donation*/
@@ -11701,17 +11706,22 @@ nav{
     bottom: 30px;
 }
 
-.contact-us .social-media{
+.social-media{
     text-align: center;
     margin-bottom: 17px;
 }
 
-.contact-us .social-media a{
+.social-media a{
     text-decoration: none;
     color: #1f2b31;
 }
 
-.contact-us .social-media i{
+.social-media a:hover{
+    text-decoration: none;
+    color: #48768e;
+}
+
+.social-media i{
     padding: 3%;
     padding-top: 5px;
     font-size: 2rem;
@@ -11720,6 +11730,7 @@ nav{
 /*STREAM PAGE*/
 .stream-page{
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 .stream-page h2{
@@ -11730,6 +11741,26 @@ nav{
 .stream-page h2,h3{
     text-align: center;
     color: #2d2d2d;
+}
+
+.donation{
+    text-align: center;
+    padding: 5%;
+}
+
+.donation a{
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+    font-family: 'Anton';
+    padding: 20px 75px;
+    background-color: #d5d29d;
+    color: #28343b;
+    border: 2px solid #28343b;
+}
+
+.donation a:hover{
+    color: #48768e;
+    border: 2px solid #48768e;
 }
 
 /* Animation */
@@ -11823,6 +11854,10 @@ nav{
     }
     .mannette{
         bottom: 100px;
+    }
+    .donation a{
+        padding: 12px 28px;
+        font-size: 1rem;
     }
     
 }

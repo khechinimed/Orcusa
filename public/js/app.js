@@ -1989,6 +1989,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2384,6 +2385,84 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
+  },
+  methods: {
+    loadTwitch: function loadTwitch() {
+      var embed = new Twitch.Embed("twitch-embed", {
+        channel: "orcusa2",
+        layout: "video",
+        autoplay: false
+      });
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, function () {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.loadTwitch();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/stream.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/stream.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  methods: {
+    loadTwitch: function loadTwitch() {
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "orcusa2",
+        layout: "video-with-chat",
+        autoplay: false // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+
+      });
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, function () {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.loadTwitch();
   }
 });
 
@@ -85108,15 +85187,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _stream_vue_vue_type_template_id_53064314___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./stream.vue?vue&type=template&id=53064314& */ "./resources/js/components/pages/stream.vue?vue&type=template&id=53064314&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _stream_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stream.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/stream.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _stream_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _stream_vue_vue_type_template_id_53064314___WEBPACK_IMPORTED_MODULE_0__.render,
   _stream_vue_vue_type_template_id_53064314___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -85194,6 +85275,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./home.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/home.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/stream.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/pages/stream.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_stream_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./stream.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/stream.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_stream_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -86070,7 +86167,9 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "partenaire" }, [
       _c("div", { staticClass: "container" }, [
-        _c("h2", [_vm._v("Nos partenaires")])
+        _c("h2", [_vm._v("Nos partenaires")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Ils nous font confiance, et nous aussi !")])
       ])
     ])
   }
@@ -86904,19 +87003,11 @@ var staticRenderFns = [
         _c("p"),
         _vm._v(" "),
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col" }, [
-            _c("iframe", {
-              attrs: {
-                src:
-                  "https://player.twitch.tv/?channel=orcusa2&parent=www.example.com",
-                frameborder: "0",
-                allowfullscreen: "true",
-                scrolling: "no",
-                height: "378",
-                width: "620"
-              }
-            })
-          ])
+          _c(
+            "div",
+            { staticClass: "col embed-responsive embed-responsive-21by9" },
+            [_c("div", { attrs: { id: "twitch-embed" } })]
+          )
         ])
       ])
     ])
@@ -87056,7 +87147,78 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "stream-page" }, [
-      _c("div", { staticClass: "container" }, [_c("h2", [_vm._v("STREAM")])])
+      _c("div", { staticClass: "container" }, [
+        _c("h2", [_vm._v("STREAM")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "div",
+            { staticClass: "embed-responsive embed-responsive-21by9" },
+            [_c("div", { attrs: { id: "twitch-embed" } })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "donation" }, [
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "https://streamlabs.com/orcusa2",
+                target: "_blank"
+              }
+            },
+            [_vm._v("Nous Soutenir")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("section", { staticClass: "social-media" }, [
+          _c(
+            "a",
+            {
+              attrs: {
+                target: "_blank",
+                href: "https://www.facebook.com/Orcusaasso/"
+              }
+            },
+            [_c("i", { staticClass: "fab fa-facebook-square" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              attrs: {
+                target: "_blank",
+                href: "https://www.instagram.com/orcusa_off"
+              }
+            },
+            [_c("i", { staticClass: "fab fa-instagram" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              attrs: { target: "_blank", href: "https://twitter.com/Orcusa2" }
+            },
+            [_c("i", { staticClass: "fab fa-twitter" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              attrs: { target: "_blank", href: "https://discord.gg/E6Ht7Yxn" }
+            },
+            [_c("i", { staticClass: "fab fa-discord" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              attrs: { target: "_blank", href: "https://www.twitch.tv/orcusa2" }
+            },
+            [_c("i", { staticClass: "fab fa-twitch" })]
+          )
+        ])
+      ])
     ])
   }
 ]

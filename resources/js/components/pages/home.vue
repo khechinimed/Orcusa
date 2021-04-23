@@ -53,8 +53,8 @@
 
                 </p>
                 <div class="row">
-                    <div class="col">
-                        <iframe src="https://player.twitch.tv/?channel=orcusa2&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+                    <div class="col embed-responsive embed-responsive-21by9">
+                        <div id="twitch-embed"></div>
                     </div>
                 </div>
             </div>
@@ -135,14 +135,29 @@
 </template>
 
 <script>
-   
 
+export default {
+    data(){
+        return {
 
-    export default {
-        data(){
-            return {
-
-            }
         }
+    },  
+    methods: {
+        loadTwitch(){
+            var embed = new Twitch.Embed("twitch-embed", {
+            channel: "orcusa2",
+            layout: "video",
+            autoplay: false,
+        });
+        
+            embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                var player = embed.getPlayer();
+                player.play();
+            });
+        }
+    },
+    mounted(){
+        this.loadTwitch();
     }
+}
 </script>

@@ -49,19 +49,20 @@
         </footer>
 
     </body>
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script src="{{mix('/js/app.js')}}"></script>
     <script>
         
         $(window).on('load', function(){
             $('.loading').fadeOut('slow');
         });
-        
+
         const toggles = document.querySelectorAll('.faq-toggle');
 
         toggles.forEach(toggle => {
             toggle.addEventListener('click', () => {
                 toggle.parentNode.classList.toggle('active');
             });
-        });
+        });        
     </script>
 </html>
