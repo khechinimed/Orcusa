@@ -25,6 +25,18 @@
                 </div>
             </div>
         </div>
+        <div class="newsletter" id="newsletter">
+            <div class="container">
+                <h2>Newsletter</h2>
+                <p>Recevez les nouveautés, actus et événements Orcusa !</p>
+                <section>
+                    <form>
+                        <input type="email" placeholder="Entrer votre email">
+                        <button type="submit">Je m'inscris !</button>
+                    </form>
+                </section>
+            </div>
+        </div>
         
         <div class="actus" id="actus">
             <div class="container">

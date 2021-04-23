@@ -11050,6 +11050,40 @@ nav{
     background-size: cover;
     background-position-y: center;
 }
+
+.newsletter{
+    background: #d2d1bd;
+    text-align: center;
+    padding-bottom: 7%;
+}
+.newsletter h2{
+    padding-top: 5%;
+}
+
+.newsletter p{
+    font-weight: 500;
+    font-size: 1.7rem;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.newsletter input{
+    padding: 5px 195px 8px 5px;
+    font-family: 'Shadows Into Light';
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 6px;
+}
+
+.newsletter button{
+    background: #48768e;
+    color: white;
+    padding: 5px 47px;
+    font-family: 'Shadows Into Light';
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 6px;
+}
+
 .actus{
     padding: 35px;
     margin-top: 4%;
@@ -11861,6 +11895,8 @@ nav{
     }
     
 }
+
+
 /* Loading */
 .loading{
     background-color: #ebebeb;
@@ -12133,13 +12169,19 @@ nav{
 {
   background-color:#ea4c89
 }
-@media (max-width:767px)
-{
-  .social-icons li.title
+
+.social-icons li.title
   {
     display:block;
     margin-right:0;
     font-weight:600
   }
+@media (max-width:747px)
+{
+    .newsletter input {
+        padding: 5px 60px 8px 5px;
+        font-family: 'Shadows Into Light';
+        margin-bottom: 20px;
+    }
 }
 

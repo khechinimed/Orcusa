@@ -2382,6 +2382,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -86872,14 +86884,16 @@ var render = function() {
     _vm._v(" "),
     _vm._m(5),
     _vm._v(" "),
+    _vm._m(6),
+    _vm._v(" "),
     _c("img", {
       staticClass: "mannette",
       attrs: { src: "/images/mannette.svg" }
     }),
     _vm._v(" "),
-    _vm._m(6),
+    _vm._m(7),
     _vm._v(" "),
-    _vm._m(7)
+    _vm._m(8)
   ])
 }
 var staticRenderFns = [
@@ -86956,6 +86970,36 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col", attrs: { id: "banner_image" } }, [
       _c("div", { staticClass: "banner_image" })
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "newsletter", attrs: { id: "newsletter" } },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("h2", [_vm._v("Newsletter")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("Recevez les nouveautés, actus et événements Orcusa !")
+          ]),
+          _vm._v(" "),
+          _c("section", [
+            _c("form", [
+              _c("input", {
+                attrs: { type: "email", placeholder: "Entrer votre email" }
+              }),
+              _vm._v(" "),
+              _c("button", { attrs: { type: "submit" } }, [
+                _vm._v("Je m'inscris !")
+              ])
+            ])
+          ])
+        ])
+      ]
+    )
   },
   function() {
     var _vm = this
