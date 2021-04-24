@@ -86799,7 +86799,40 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("EVENEMENTS")])])
+    return _c("div", { staticClass: "events-page" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "calendrier" }, [
+          _c("h2", [_vm._v("Calendrier des évènements")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "last-events" }, [
+          _c("h2", [_vm._v("Nos Derniers évènements")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card", staticStyle: { width: "18rem" } }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: { src: "#", alt: "..." }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(
+                  "Some quick example text to build on the card title and make up the bulk of the card's content."
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                { staticClass: "btn btn-primary", attrs: { href: "#" } },
+                [_vm._v("Go somewhere")]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -86831,7 +86864,38 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Forum")])])
+    return _c("div", { staticClass: "forum" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "login" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "forum-section" }, [
+          _c("h2", [_vm._v("Forum")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card", staticStyle: { width: "18rem" } }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: { src: "#", alt: "..." }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("h5", { staticClass: "card-title" }, [_vm._v("Card title")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(
+                  "Some quick example text to build on the card title and make up the bulk of the card's content."
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                { staticClass: "btn btn-primary", attrs: { href: "#" } },
+                [_vm._v("Go somewhere")]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -86913,7 +86977,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("a", { attrs: { "data-scroll": "", href: "#actus" } }, [
+    return _c("a", { attrs: { "data-scroll": "", href: "#newsletter" } }, [
       _c("i", { staticClass: "fas fa-chevron-down" })
     ])
   },

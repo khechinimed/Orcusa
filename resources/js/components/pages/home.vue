@@ -9,7 +9,7 @@
                         <p>Une association<br> pour soutenir les gamers sensibiliser et animer</p>
                     </div>
                     <span id="typed"></span>
-                    <a data-scroll href="#actus"><i class="fas fa-chevron-down"></i></a>
+                    <a data-scroll href="#newsletter"><i class="fas fa-chevron-down"></i></a>
                     <section>
                         <a target="_blank" href="https://www.facebook.com/Orcusaasso/"><i class="fab fa-facebook-square"></i></a>
                         <a target="_blank" href="https://www.instagram.com/orcusa_off"><i class="fab fa-instagram"></i></a>

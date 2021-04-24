@@ -10986,7 +10986,10 @@ nav{
     cursor: pointer;
 }
 
-
+h2{
+    font-family: 'Teko', sans-serif;
+    font-size: 4rem;
+}
 
 /*Home Page*/
 
@@ -11064,6 +11067,7 @@ nav{
     font-weight: 500;
     font-size: 1.7rem;
     font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 8px;
 }
 
 .newsletter input{
@@ -11774,7 +11778,7 @@ nav{
 
 .stream-page h2,h3{
     text-align: center;
-    color: #2d2d2d;
+    color: #515a6e;
 }
 
 .donation{
@@ -11795,6 +11799,10 @@ nav{
 .donation a:hover{
     color: #48768e;
     border: 2px solid #48768e;
+}
+
+.events-page{
+    padding: 40px 0px;
 }
 
 /* Animation */
