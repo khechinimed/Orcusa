@@ -11,6 +11,11 @@ import stream from './components/pages/stream'
 import forum from './components/pages/forum'
 import contact from './components/pages/contact'
 
+
+/** Admin Pages */
+
+
+
 const routes = [
     //Project routes
 

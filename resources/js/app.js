@@ -14,10 +14,18 @@ Vue.component('navbar', require('./components/navbar.vue').default);
 Vue.component('foot', require('./components/footer.vue').default);
 Vue.use(ViewUI);
 
+/** Admin */
+Vue.component('mainapp', require('./components/admin/mainapp.vue').default);
+
 const app = new Vue({
     el: '#app',
     router
 });
+
+const admin = new Vue({
+    el: '#admin',
+    router
+})
 
 const footer = new Vue({
     el: '#footer'

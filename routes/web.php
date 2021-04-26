@@ -30,3 +30,9 @@ Route::get('/stream', function () { return view('welcome'); });
 Route::get('/forum', function () { return view('welcome'); });
 
 Route::get('/contact', function () { return view('welcome'); });
+
+
+
+Route::get('/admin', function () {
+    return view('admin');
+});
