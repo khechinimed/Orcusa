@@ -30,8 +30,8 @@
                 <h2>Newsletter</h2>
                 <p>Recevez les nouveautés, actus et événements Orcusa !</p>
                 <section>
-                    <form>
-                        <input type="email" placeholder="Entrer votre email">
+                    <form @submit.prevent="subscribe" method="post">
+                        <input v-model="newsletter.email" name="email" type="email" placeholder="Entrer votre email" required>
                         <button type="submit">Je m'inscris !</button>
                     </form>
                 </section>
@@ -151,21 +151,37 @@
 export default {
     data(){
         return {
-
+            newsletter: {
+                email: '',
+            }
         }
     },  
     methods: {
         loadTwitch(){
             var embed = new Twitch.Embed("twitch-embed", {
-            channel: "orcusa2",
-            layout: "video",
-            autoplay: false,
-        });
+                channel: "orcusa2",
+                layout: "video",
+                autoplay: false,
+            });
         
             embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
                 var player = embed.getPlayer();
                 player.play();
             });
+        },
+
+        async subscribe(){
+            let res = await axios.post('/subscribe', {
+                        email: this.newsletter.email,
+                    });
+
+            if(res.status === 200){
+				this.s('Merci ! Vous êtes désormais abonné à notre newsletter!')
+                this.newsletter.email = ''
+			}else{
+				this.swr();
+			}
+            
         }
     },
     mounted(){

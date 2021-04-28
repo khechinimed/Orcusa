@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\NewsletterController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +33,10 @@ Route::get('/forum', function () { return view('welcome'); });
 
 Route::get('/contact', function () { return view('welcome'); });
 
-
-
 Route::get('/admin', function () {
     return view('admin');
 });
+
+
+//MailChimp pour newsletter
+Route::post('/subscribe', [NewsletterController::class, 'subscribe']);
