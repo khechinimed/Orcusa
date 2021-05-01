@@ -85601,10 +85601,16 @@ var render = function() {
     [
       _c("div", [
         _c("div", { staticClass: "_1side_menu" }, [
-          _vm._m(0),
+          _c("div", { staticClass: "_1side_menu_logo" }, [
+            _c("img", {
+              staticClass: "banner_logo",
+              staticStyle: { width: "240px", "margin-left": "0px" },
+              attrs: { src: "/images/logo.png" }
+            })
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "_1side_menu_content" }, [
-            _vm._m(1),
+            _vm._m(0),
             _vm._v(" "),
             _c("div", { staticClass: "_1side_menu_list" }, [
               _c("ul", { staticClass: "_1side_menu_list_ul" }, [
@@ -85613,10 +85619,10 @@ var render = function() {
                   [
                     _c(
                       "router-link",
-                      { attrs: { to: "dashboard" } },
+                      { attrs: { to: "users" } },
                       [
-                        _c("Icon", { attrs: { type: "ios-speedometer" } }),
-                        _vm._v("Dashboard")
+                        _c("Icon", { attrs: { type: "ios-people" } }),
+                        _vm._v("Utilisateurs")
                       ],
                       1
                     )
@@ -85629,10 +85635,10 @@ var render = function() {
                   [
                     _c(
                       "router-link",
-                      { attrs: { to: "tags" } },
+                      { attrs: { to: "events" } },
                       [
-                        _c("Icon", { attrs: { type: "ios-speedometer" } }),
-                        _vm._v("Tags")
+                        _c("Icon", { attrs: { type: "ios-megaphone" } }),
+                        _vm._v("Évènements")
                       ],
                       1
                     )
@@ -85645,10 +85651,10 @@ var render = function() {
                   [
                     _c(
                       "router-link",
-                      { attrs: { to: "category" } },
+                      { attrs: { to: "forum" } },
                       [
-                        _c("Icon", { attrs: { type: "ios-speedometer" } }),
-                        _vm._v("Categories")
+                        _c("Icon", { attrs: { type: "ios-create" } }),
+                        _vm._v("Forum")
                       ],
                       1
                     )
@@ -85677,16 +85683,6 @@ var render = function() {
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "_1side_menu_logo" }, [
-      _c("h3", { staticStyle: { "text-align": "center" } }, [
-        _vm._v("Logo Image")
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
