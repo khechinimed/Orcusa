@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -55,6 +56,15 @@ class UserController extends Controller
         return $user;
     }
 
+    public function deleteUser(Request $request){
+        //validate
+        $this->validate($request, [
+            'id' => 'required',
+        ]);
+
+        return User::where('id', $request->id)->delete();
+    }
+
     public function upload(Request $request){
         $request->validate([
             'file' => 'required|mimes:jpeg,jpg,png'
@@ -67,19 +77,21 @@ class UserController extends Controller
     }
 
     public function deleteImage(Request $request){
-        $fileName = $request->imageName;
+        $fileName = $request->image;
         $this->deleteFileFromServer($fileName);
 
+        Storage::delete(public_path('uploads').$fileName);
         return 'done';
     }
 
     public function deleteFileFromServer($fileName){
-        $filePath = public_path().'/uploads/'.$fileName;
+        $filePath = public_path('uploads').$fileName;
+        
         if(file_exists($filePath)){
             @unlink($filePath);
-            File::delete($filePath);
         }
-        return;
+
+        return $filePath;
     }
 
      

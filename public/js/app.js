@@ -2193,7 +2193,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.editModal = true;
       this.index = index;
     },
-    deleteTag: function deleteTag() {
+    DeleteUser: function DeleteUser() {
       var _this3 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
@@ -2202,11 +2202,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                //if(!confirm('Are you sure you want to delete this tag ?')) return 
-                //this.$set(tag, 'isDeleting', true)
                 _this3.isDeleting = true;
                 _context3.next = 3;
-                return _this3.callApi('post', 'app/delete_tag', _this3.deleteItem);
+                return _this3.callApi('post', 'app/delete_user', _this3.deleteItem);
 
               case 3:
                 res = _context3.sent;
@@ -2214,9 +2212,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 if (res.status === 200) {
                   _this3.showDeleteModal = false;
 
-                  _this3.tags.splice(_this3.deletingIndex, 1);
+                  _this3.users.splice(_this3.deletingIndex, 1);
 
-                  _this3.s('Tag has been deleted successfully');
+                  _this3.s('Utilisateur supprimé avec succès');
                 } else {
                   _this3.swr();
                 }
@@ -2231,8 +2229,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee3);
       }))();
     },
-    showDeletingModal: function showDeletingModal(tag, i) {
-      this.deleteItem = tag;
+    showDeletingModal: function showDeletingModal(user, i) {
+      this.deleteItem = user;
       this.deletingIndex = i;
       this.showDeleteModal = true;
     },
@@ -86515,7 +86513,7 @@ var render = function() {
                                   }
                                 }
                               },
-                              [_vm._v("Edit")]
+                              [_vm._v("Modifier")]
                             ),
                             _vm._v(" "),
                             _c(
@@ -86532,7 +86530,7 @@ var render = function() {
                                   }
                                 }
                               },
-                              [_vm._v("Delete")]
+                              [_vm._v("Supprimer")]
                             )
                           ],
                           1
@@ -86721,7 +86719,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Close")]
+                    [_vm._v("Fermer")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -86734,7 +86732,15 @@ var render = function() {
                       },
                       on: { click: _vm.addAdmin }
                     },
-                    [_vm._v(_vm._s(_vm.isAdding ? "Adding..." : "Add user"))]
+                    [
+                      _vm._v(
+                        _vm._s(
+                          _vm.isAdding
+                            ? "Ajout en cours..."
+                            : "Ajout d'un utilisateur"
+                        )
+                      )
+                    ]
                   )
                 ],
                 1
@@ -86746,7 +86752,7 @@ var render = function() {
             "Modal",
             {
               attrs: {
-                title: "Edit tag",
+                title: "Modifier utilisateur",
                 "mask-closable": false,
                 closable: false
               },
@@ -86862,7 +86868,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Close")]
+                    [_vm._v("Fermer")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -86875,7 +86881,15 @@ var render = function() {
                       },
                       on: { click: _vm.editAdmin }
                     },
-                    [_vm._v(_vm._s(_vm.isAdding ? "Adding..." : "Edit Admin "))]
+                    [
+                      _vm._v(
+                        _vm._s(
+                          _vm.isAdding
+                            ? "Modification..."
+                            : "Modification Utilisateur "
+                        )
+                      )
+                    ]
                   )
                 ],
                 1
@@ -86906,13 +86920,15 @@ var render = function() {
                 [
                   _c("Icon", { attrs: { type: "ios-information-circle" } }),
                   _vm._v(" "),
-                  _c("span", [_vm._v("Delete confirmation")])
+                  _c("span", [_vm._v("Supprimer confirmation")])
                 ],
                 1
               ),
               _vm._v(" "),
               _c("div", { staticStyle: { "text-align": "center" } }, [
-                _c("p", [_vm._v("Are you sure you want to delete this Tag ?")])
+                _c("p", [
+                  _vm._v("Etes-vous sur de vouloir supprimer cet utilisateur?")
+                ])
               ]),
               _vm._v(" "),
               _c(
@@ -86928,9 +86944,9 @@ var render = function() {
                         long: "",
                         loading: _vm.isDeleting
                       },
-                      on: { click: _vm.deleteTag }
+                      on: { click: _vm.DeleteUser }
                     },
-                    [_vm._v("Delete")]
+                    [_vm._v("Supprimer")]
                   )
                 ],
                 1

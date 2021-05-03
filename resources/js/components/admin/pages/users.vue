@@ -28,8 +28,8 @@
 								<td class="">{{user.email}}</td>
 								<td class="">{{user.userType}}</td>
 								<td>
-									<Button type="info" size="small" @click="showEditModal(user, i)">Edit</Button>
-									<Button type="error" size="small" @click="showDeletingModal(user, i)" :loading="user.isDeleting">Delete</Button>
+									<Button type="info" size="small" @click="showEditModal(user, i)">Modifier</Button>
+									<Button type="error" size="small" @click="showDeletingModal(user, i)" :loading="user.isDeleting">Supprimer</Button>
 								</td>
 							</tr>
 								<!-- ITEMS -->
@@ -87,15 +87,15 @@
 					
 
 					<div slot="footer">
-						<Button type="default" @click="addModal=false">Close</Button>
-						<Button type="primary" @click="addAdmin" :disabled='isAdding' :loading="isAdding">{{isAdding ? 'Adding...' : 'Add user'}}</Button>
+						<Button type="default" @click="addModal=false">Fermer</Button>
+						<Button type="primary" @click="addAdmin" :disabled='isAdding' :loading="isAdding">{{isAdding ? 'Ajout en cours...' : 'Ajout d\'un utilisateur'}}</Button>
 					</div>
 				</Modal>
 
-				<!-- tag editing modal -->
+				<!-- User editing modal -->
 				<Modal
 					v-model="editModal"
-					title="Edit tag"
+					title="Modifier utilisateur"
 					:mask-closable="false"
 					:closable="false"
 					>
@@ -116,22 +116,22 @@
                     </div>
 
 					<div slot="footer"> 
-						<Button type="default" @click="editModal=false">Close</Button>
-						<Button type="primary" @click="editAdmin" :disabled='isAdding' :loading="isAdding">{{isAdding ? 'Adding...' : 'Edit Admin '}}</Button>
+						<Button type="default" @click="editModal=false">Fermer</Button>
+						<Button type="primary" @click="editAdmin" :disabled='isAdding' :loading="isAdding">{{isAdding ? 'Modification...' : 'Modification Utilisateur '}}</Button>
 					</div>
 				</Modal>
 
-				<!-- tag deleting modal -->		
+				<!-- User deleting modal -->		
 				<Modal v-model="showDeleteModal" width="360">
 					<p slot="header" style="color:#f60;text-align:center">
 						<Icon type="ios-information-circle"></Icon>
-						<span>Delete confirmation</span>
+						<span>Supprimer confirmation</span>
 					</p>
 					<div style="text-align:center">
-						<p>Are you sure you want to delete this Tag ?</p>
+						<p>Etes-vous sur de vouloir supprimer cet utilisateur?</p>
 					</div>
 					<div slot="footer">
-						<Button type="error" size="large" long :loading="isDeleting" @click="deleteTag">Delete</Button>
+						<Button type="error" size="large" long :loading="isDeleting" @click="DeleteUser">Supprimer</Button>
 					</div>
 				</Modal>
 
@@ -229,16 +229,14 @@ export default {
 			this.editModal = true
 			this.index = index
 		},
-		async deleteTag(){
-			//if(!confirm('Are you sure you want to delete this tag ?')) return 
-			//this.$set(tag, 'isDeleting', true)
+		async DeleteUser(){
 			
 			this.isDeleting = true
-			const res = await this.callApi('post', 'app/delete_tag', this.deleteItem)
+			const res = await this.callApi('post', 'app/delete_user', this.deleteItem)
 			if(res.status === 200){
 				this.showDeleteModal = false
-				this.tags.splice(this.deletingIndex, 1)
-				this.s('Tag has been deleted successfully')
+				this.users.splice(this.deletingIndex, 1)
+				this.s('Utilisateur supprimé avec succès')
 			}else{
 				this.swr()
 			}
@@ -246,8 +244,8 @@ export default {
 			
 
 		},
-		showDeletingModal(tag, i){
-			this.deleteItem = tag
+		showDeletingModal(user, i){
+			this.deleteItem = user
 			this.deletingIndex = i
 			this.showDeleteModal = true
 		},
