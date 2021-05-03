@@ -13,8 +13,8 @@ import contact from './components/pages/contact'
 
 
 /** Admin Pages */
-
-
+import dashboard from './components/admin/pages/dashboard'
+import users from './components/admin/pages/users'
 
 const routes = [
     //Project routes
@@ -46,6 +46,16 @@ const routes = [
     {
         path: '/contact',
         component:  contact
+    },
+
+    //Admin routes
+    {
+        path: '/users',
+        component: users
+    },
+    {
+        path: '/dashboard',
+        component: dashboard
     }
 ]
 

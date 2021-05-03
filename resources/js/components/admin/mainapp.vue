@@ -1,6 +1,6 @@
 <template>
+  <div>
     <div>
-      <div>
       <!--========== ADMIN SIDE MENU one ========-->
       <div class="_1side_menu" >
         <div class="_1side_menu_logo">
@@ -18,9 +18,10 @@
           <!--~~~ MENU LIST ~~~~~~-->
           <div class="_1side_menu_list">
             <ul class="_1side_menu_list_ul">
+              <li><router-link to="dashboard"><Icon type="ios-dashboard"/>Dashboard</router-link></li>
               <li><router-link to="users"><Icon type="ios-people"/>Utilisateurs</router-link></li>
-              <li><router-link to="events"><Icon type="ios-megaphone"/>Évènements</router-link></li>
-              <li><router-link to="forum"><Icon type="ios-create"/>Forum</router-link></li>
+              <li><router-link to="eventsManage"><Icon type="ios-megaphone"/>Évènements</router-link></li>
+              <li><router-link to="forumManage"><Icon type="ios-create"/>Forum</router-link></li>
               
 
 
@@ -50,6 +51,6 @@
       </div>
       <!--========= HEADER ==========-->
     </div>
-    	<router-view/>
+    <router-view/>
   </div>
 </template>

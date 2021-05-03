@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -33,9 +34,17 @@ Route::get('/forum', function () { return view('welcome'); });
 
 Route::get('/contact', function () { return view('welcome'); });
 
+
+
 Route::get('/admin', function () {
     return view('admin');
 });
+Route::get('app/get_users', [UserController::class, 'getUsers']);
+Route::post('app/create_user', [UserController::class, 'createUser']);
+Route::post('app/edit_user', [UserController::class, 'editUser']);
+
+Route::post('app/upload', [UserController::class, 'upload']);
+Route::post('app/delete_image', [UserController::class, 'deleteImage']);
 
 
 //MailChimp pour newsletter
