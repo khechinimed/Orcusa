@@ -78,17 +78,19 @@ class UserController extends Controller
 
     public function deleteImage(Request $request){
         $fileName = $request->image;
+        
         $this->deleteFileFromServer($fileName);
 
-        Storage::delete(public_path('uploads').$fileName);
-        return 'done';
+        return $fileName;
+        
     }
 
     public function deleteFileFromServer($fileName){
-        $filePath = public_path('uploads').$fileName;
+        $filePath = public_path($fileName);
         
         if(file_exists($filePath)){
-            @unlink($filePath);
+            Storage::delete($filePath);
+            unlink($filePath);
         }
 
         return $filePath;
