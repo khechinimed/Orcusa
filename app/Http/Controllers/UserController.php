@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class UserController extends Controller
 {
@@ -76,6 +77,7 @@ class UserController extends Controller
         $filePath = public_path().'/uploads/'.$fileName;
         if(file_exists($filePath)){
             @unlink($filePath);
+            File::delete($filePath);
         }
         return;
     }

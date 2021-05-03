@@ -23,7 +23,7 @@
 								<!-- ITEMS -->
 							<tr v-for="(user, i) in users" :key="i">
 								<td>{{user.id}}</td>
-								<td class=""><img :src="`/uploads/${user.image}`"></td>
+								<td class="userImage"><img v-bind:src="user.image"></td>
 								<td class="_table_name">{{user.fullName}}</td>
 								<td class="">{{user.email}}</td>
 								<td class="">{{user.userType}}</td>
@@ -77,7 +77,7 @@
                     </div>
 					<div class="space">
 						<div class="demo-upload-list" v-if="data.image">
-							<img :src="`/uploads/${data.image}`">
+							<img :src="`${data.image}`">
 							<div class="demo-upload-list-cover" >
 								<Icon type="ios-trash-outline" @click="deleteImage"></Icon>
 							</div>
@@ -180,7 +180,7 @@ export default {
 			if(this.data.password.trim() == '') return this.e('Password is required')
 			if(!this.data.userType.trim()) return this.e('UserType is required')
 
-            this.data.image = `/uploads/${this.data.image}`
+            this.data.image = `${this.data.image}`
 			
 			const res = await this.callApi('post', 'app/create_user', this.data)
 			if(res.status === 201 || res.status === 200){
@@ -312,3 +312,10 @@ export default {
 
 }
 </script>
+
+<style scoped>
+	.userImage{
+		width: 75px;
+		height: 80px;
+	}
+</style>
