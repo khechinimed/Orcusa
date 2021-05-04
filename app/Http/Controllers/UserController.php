@@ -40,12 +40,13 @@ class UserController extends Controller
             'fullName' => 'required',
             'email' => "bail|required|email|unique:users,email,$request->id",
             'password' => 'min:6',
-            'userType' => 'required',
+            'userType' => 'required'
         ]);
         $data = [
             'fullName' => $request->fullName,
             'email' => $request->email,
-            'userType' => $request->userType
+            'userType' => $request->userType,
+            'image' => $request->image
         ];
         if($request->password){
             $password = bcrypt($request->password);
@@ -61,6 +62,12 @@ class UserController extends Controller
         $this->validate($request, [
             'id' => 'required',
         ]);
+
+        $fileName = $request->image;
+        $filePath = public_path($fileName);
+        if(file_exists($filePath)){
+            Storage::delete($filePath);
+        }
 
         return User::where('id', $request->id)->delete();
     }

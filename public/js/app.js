@@ -2007,6 +2007,32 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2101,6 +2127,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                   _this.addModal = false;
                   _this.data.image = '';
+                  _this.data.fullName = '';
+                  _this.data.email = '';
+                  _this.data.password = '';
+                  _this.data.userType = '';
+
+                  _this.$refs.uploads.clearFiles();
                 } else {
                   if (res.status == 422) {
                     for (i in res.data.errors) {
@@ -2152,10 +2184,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return _context2.abrupt("return", _this2.e('UserType is required'));
 
               case 6:
-                _context2.next = 8;
+                _this2.editData.image = "".concat(_this2.data.image);
+                _context2.next = 9;
                 return _this2.callApi('post', 'app/edit_user', _this2.editData);
 
-              case 8:
+              case 9:
                 res = _context2.sent;
 
                 if (res.status === 200) {
@@ -2164,6 +2197,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this2.s('User has been edited succesfully!');
 
                   _this2.editModal = false;
+
+                  _this2.$refs.uploads.clearFiles();
                 } else {
                   if (res.status == 422) {
                     for (i in res.data.errors) {
@@ -2174,7 +2209,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   }
                 }
 
-              case 10:
+              case 11:
               case "end":
                 return _context2.stop();
             }
@@ -2236,6 +2271,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     handleSuccess: function handleSuccess(res, file) {
       res = "/uploads/".concat(res);
+      this.$refs.uploads.clearFiles();
 
       if (this.isEditingItem) {
         return this.editData.image = res;
@@ -86492,9 +86528,7 @@ var render = function() {
                           _c("img", { attrs: { src: user.image } })
                         ]),
                         _vm._v(" "),
-                        _c("td", { staticClass: "_table_name" }, [
-                          _vm._v(_vm._s(user.fullName))
-                        ]),
+                        _c("td", {}, [_vm._v(_vm._s(user.fullName))]),
                         _vm._v(" "),
                         _c("td", {}, [_vm._v(_vm._s(user.email))]),
                         _vm._v(" "),
@@ -86570,6 +86604,7 @@ var render = function() {
                     {
                       ref: "uploads",
                       attrs: {
+                        multiple: false,
                         headers: {
                           "x-csrf-token": _vm.token,
                           "X-Requested-With": "XMLHttpRequest"
@@ -86769,6 +86804,42 @@ var render = function() {
                 "div",
                 { staticClass: "space" },
                 [
+                  _c(
+                    "Upload",
+                    {
+                      ref: "uploads",
+                      attrs: {
+                        multiple: false,
+                        headers: {
+                          "x-csrf-token": _vm.token,
+                          "X-Requested-With": "XMLHttpRequest"
+                        },
+                        "on-success": _vm.handleSuccess,
+                        "on-error": _vm.handleError,
+                        "max-size": 3048,
+                        format: ["jpg", "jpeg", "png"],
+                        "on-format-error": _vm.handleFormatError,
+                        "on-exceeded-size": _vm.handleMaxSize,
+                        action: "/app/upload"
+                      }
+                    },
+                    [
+                      _c(
+                        "Button",
+                        { attrs: { icon: "ios-cloud-upload-outline" } },
+                        [_vm._v("Upload fichier")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "space" },
+                [
                   _c("Input", {
                     staticStyle: { width: "300px" },
                     attrs: { type: "text", placeholder: "Nom Complet" },
@@ -86853,6 +86924,26 @@ var render = function() {
                 ],
                 1
               ),
+              _vm._v(" "),
+              _c("div", { staticClass: "space" }, [
+                _vm.editData.image
+                  ? _c("div", { staticClass: "demo-upload-list" }, [
+                      _c("img", { attrs: { src: "" + _vm.editData.image } }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "demo-upload-list-cover" },
+                        [
+                          _c("Icon", {
+                            attrs: { type: "ios-trash-outline" },
+                            on: { click: _vm.deleteImage }
+                          })
+                        ],
+                        1
+                      )
+                    ])
+                  : _vm._e()
+              ]),
               _vm._v(" "),
               _c(
                 "div",

@@ -24,7 +24,7 @@
 							<tr v-for="(user, i) in users" :key="i">
 								<td>{{user.id}}</td>
 								<td class="userImage"><img v-bind:src="user.image"></td>
-								<td class="_table_name">{{user.fullName}}</td>
+								<td class="">{{user.fullName}}</td>
 								<td class="">{{user.email}}</td>
 								<td class="">{{user.userType}}</td>
 								<td>
@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				
-				<!-- tag adding modal -->
+				<!-- User adding modal -->
 				<Modal
 					v-model="addModal"
 					title="Ajout d'un utilisateur"
@@ -48,6 +48,7 @@
                     <div class="space">
                         <Upload
                             ref="uploads"
+							:multiple="false"
                             :headers="{'x-csrf-token' : token, 'X-Requested-With' : 'XMLHttpRequest'}"
                             :on-success="handleSuccess"
                             :on-error="handleError"
@@ -99,6 +100,22 @@
 					:mask-closable="false"
 					:closable="false"
 					>
+					<div class="space">
+                        <Upload
+                            ref="uploads"
+							:multiple="false"
+                            :headers="{'x-csrf-token' : token, 'X-Requested-With' : 'XMLHttpRequest'}"
+                            :on-success="handleSuccess"
+                            :on-error="handleError"
+                            :max-size="3048"
+                            :format="['jpg','jpeg','png']"
+                            :on-format-error="handleFormatError"
+                            :on-exceeded-size="handleMaxSize" 
+                            action="/app/upload"
+                        >
+                            <Button icon="ios-cloud-upload-outline">Upload fichier</Button>
+                        </Upload>
+                    </div>
                     <div class="space">
                         <Input type="text" v-model="editData.fullName" placeholder="Nom Complet" style="width: 300px" />
                     </div>
@@ -114,6 +131,15 @@
                             <Option value="membre">Membre</Option>
                         </Select>
                     </div>
+
+					<div class="space">
+						<div class="demo-upload-list" v-if="editData.image">
+							<img :src="`${editData.image}`">
+							<div class="demo-upload-list-cover" >
+								<Icon type="ios-trash-outline" @click="deleteImage"></Icon>
+							</div>
+						</div>
+					</div>
 
 					<div slot="footer"> 
 						<Button type="default" @click="editModal=false">Fermer</Button>
@@ -188,6 +214,12 @@ export default {
 				this.s('Admin user has been added succesfully!')
 				this.addModal = false
                 this.data.image = ''
+				this.data.fullName = ''
+				this.data.email = ''
+				this.data.password = ''
+				this.data.userType = ''
+
+				this.$refs.uploads.clearFiles()
 			}else{
 				if(res.status==422){
                     for(let i in res.data.errors){
@@ -202,12 +234,15 @@ export default {
 			if(this.editData.fullName.trim() == '') return this.e('User name is required')
 			if(this.editData.email.trim() == '') return this.e('Email is required')
 			if(!this.editData.userType.trim()) return this.e('UserType is required')
+
+			this.editData.image = `${this.data.image}`
 			
 			const res = await this.callApi('post', 'app/edit_user', this.editData)
 			if(res.status === 200){
 				this.users[this.index] = this.editData
 				this.s('User has been edited succesfully!')
 				this.editModal = false
+				this.$refs.uploads.clearFiles()
 			}else{
 				if(res.status == 422){
 					for(let i in res.data.errors){
@@ -251,6 +286,7 @@ export default {
 		},
         handleSuccess(res, file) {
 			res = `/uploads/${res}`;
+			this.$refs.uploads.clearFiles();
 			if (this.isEditingItem) {
 				return (this.editData.image = res);
 			}
