@@ -86926,9 +86926,9 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("div", { staticClass: "space" }, [
-                _vm.editData.image
+                _vm.data.image
                   ? _c("div", { staticClass: "demo-upload-list" }, [
-                      _c("img", { attrs: { src: "" + _vm.editData.image } }),
+                      _c("img", { attrs: { src: "" + _vm.data.image } }),
                       _vm._v(" "),
                       _c(
                         "div",

@@ -133,8 +133,8 @@
                     </div>
 
 					<div class="space">
-						<div class="demo-upload-list" v-if="editData.image">
-							<img :src="`${editData.image}`">
+						<div class="demo-upload-list" v-if="data.image">
+							<img :src="`${data.image}`">
 							<div class="demo-upload-list-cover" >
 								<Icon type="ios-trash-outline" @click="deleteImage"></Icon>
 							</div>
