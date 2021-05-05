@@ -188,7 +188,7 @@ export default {
                 email: '',
                 password: '',
                 userType: '',
-                image: ''
+                image: this.image
 			},
             token: '',
 			index: -1,

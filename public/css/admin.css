@@ -388,6 +388,14 @@ p {
       margin-bottom: 16px;
   }
   ._1side_menu_list_ul{}
+  ._1side_menu_list_ul2{
+    position: relative;
+    top: 100px;
+  }
+  ._1side_menu_list_ul2 li{
+    list-style: none;
+    text-align: center;
+  }
   ._1side_menu_list_ul li i {
       font-size: 19px;
       margin-right: 8px;

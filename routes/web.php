@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\UserController;
+use Illuminate\Auth\Events\Login;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
@@ -37,8 +40,12 @@ Route::get('/contact', function () { return view('welcome'); });
 
 
 Route::get('/admin', function () {
+    //
     return view('admin');
-});
+})->middleware('auth');
+
+Route::get('/logout', [LoginController::class, 'logout']);
+
 Route::get('app/get_users', [UserController::class, 'getUsers']);
 Route::post('app/create_user', [UserController::class, 'createUser']);
 Route::post('app/edit_user', [UserController::class, 'editUser']);

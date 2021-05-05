@@ -18,9 +18,10 @@
           <!--~~~ MENU LIST ~~~~~~-->
           <div class="_1side_menu_list">
             <ul class="_1side_menu_list_ul">
-              <li><router-link to="dashboard"><Icon type="ios-dashboard"/>Dashboard</router-link></li>
+              <li><router-link to="dashboard"><Icon type="md-analytics"/>Dashboard</router-link></li>
               <li><router-link to="users"><Icon type="ios-people"/>Utilisateurs</router-link></li>
               <li><router-link to="eventsManage"><Icon type="ios-megaphone"/>Évènements</router-link></li>
+              <li><router-link to="demandes"><Icon type="ios-megaphone"/>Demande d'adhésion</router-link></li>
               <li><router-link to="forumManage"><Icon type="ios-create"/>Forum</router-link></li>
               
 
@@ -30,6 +31,9 @@
               <li><router-link to="adminusers"><Icon type="ios-speedometer" /> Admin users</router-link></li>
               <li><router-link to="role"><Icon type="ios-speedometer" /> Role Management</router-link></li>
               <li><router-link to="assignRole"><Icon type="ios-speedometer" /> Assign role</router-link></li> -->
+            </ul>
+            <ul class="_1side_menu_list_ul2">
+              <li><Button type="primary" @click="logout">Déconnexion</Button></li>
             </ul>
           </div>
         </div>
@@ -54,3 +58,17 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+    export default {
+        methods: {
+            logout() {
+                axios.post('/logout')
+                    .then(() => location.href = '/login')
+            }
+        },
+        mounted() {
+            console.log('Component mounted.')
+        }
+    }
+</script>

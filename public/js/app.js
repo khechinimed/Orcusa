@@ -1845,6 +1845,93 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/mainapp.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/mainapp.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    logout: function logout() {
+      axios.post('/logout').then(function () {
+        return location.href = '/login';
+      });
+    }
+  },
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/pages/users.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/pages/users.vue?vue&type=script&lang=js& ***!
@@ -2053,7 +2140,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         email: '',
         password: '',
         userType: '',
-        image: ''
+        image: this.image
       },
       token: '',
       index: -1,
@@ -2391,58 +2478,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2530,8 +2573,39 @@ __webpack_require__.r(__webpack_exports__);
     return {
       data: {
         members: 8
-      }
+      },
+      users: []
     };
+  },
+  created: function created() {
+    var _this = this;
+
+    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      var res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _this.token = window.Laravel.csrfToken;
+              _context.next = 3;
+              return _this.callApi('get', 'app/get_users');
+
+            case 3:
+              res = _context.sent;
+
+              if (res.status === 200) {
+                _this.users = res.data;
+              } else {
+                _this.swr();
+              }
+
+            case 5:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))();
   }
 });
 
@@ -85532,15 +85606,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _mainapp_vue_vue_type_template_id_8f7ff266___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mainapp.vue?vue&type=template&id=8f7ff266& */ "./resources/js/components/admin/mainapp.vue?vue&type=template&id=8f7ff266&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _mainapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mainapp.vue?vue&type=script&lang=js& */ "./resources/js/components/admin/mainapp.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _mainapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _mainapp_vue_vue_type_template_id_8f7ff266___WEBPACK_IMPORTED_MODULE_0__.render,
   _mainapp_vue_vue_type_template_id_8f7ff266___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -85978,6 +86054,22 @@ component.options.__file = "resources/js/components/pages/stream.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/admin/mainapp.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/admin/mainapp.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_mainapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./mainapp.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/mainapp.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_mainapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/admin/pages/users.vue?vue&type=script&lang=js&":
 /*!********************************************************************************!*\
   !*** ./resources/js/components/admin/pages/users.vue?vue&type=script&lang=js& ***!
@@ -86336,7 +86428,7 @@ var render = function() {
                       "router-link",
                       { attrs: { to: "dashboard" } },
                       [
-                        _c("Icon", { attrs: { type: "ios-dashboard" } }),
+                        _c("Icon", { attrs: { type: "md-analytics" } }),
                         _vm._v("Dashboard")
                       ],
                       1
@@ -86382,12 +86474,42 @@ var render = function() {
                   [
                     _c(
                       "router-link",
+                      { attrs: { to: "demandes" } },
+                      [
+                        _c("Icon", { attrs: { type: "ios-megaphone" } }),
+                        _vm._v("Demande d'adhésion")
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  [
+                    _c(
+                      "router-link",
                       { attrs: { to: "forumManage" } },
                       [
                         _c("Icon", { attrs: { type: "ios-create" } }),
                         _vm._v("Forum")
                       ],
                       1
+                    )
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "_1side_menu_list_ul2" }, [
+                _c(
+                  "li",
+                  [
+                    _c(
+                      "Button",
+                      { attrs: { type: "primary" }, on: { click: _vm.logout } },
+                      [_vm._v("Déconnexion")]
                     )
                   ],
                   1
@@ -87515,7 +87637,42 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _vm._m(1),
+    _c("div", { staticClass: "dirigeants" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h2", [_vm._v("Nos Dirigeants")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "div",
+            { staticClass: "row" },
+            _vm._l(_vm.users, function(user, i) {
+              return _c("div", { key: i, staticClass: "col-md-3 col-sm-6" }, [
+                user.userType == "admin"
+                  ? _c("div", { staticClass: "our-team" }, [
+                      _c("div", { staticClass: "pic" }, [
+                        _c("img", { attrs: { src: user.image } })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "team-content" }, [
+                        _c("h3", { staticClass: "title" }, [
+                          _vm._v(_vm._s(user.fullName))
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "post" }, [
+                          _vm._v("Président")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(1, true)
+                    ])
+                  : _vm._e()
+              ])
+            }),
+            0
+          )
+        ])
+      ])
+    ]),
     _vm._v(" "),
     _c("hr"),
     _vm._v(" "),
@@ -87582,197 +87739,42 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "dirigeants" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("h2", [_vm._v("Nos Dirigeants")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-3 col-sm-6" }, [
-              _c("div", { staticClass: "our-team" }, [
-                _c("div", { staticClass: "pic" }, [
-                  _c("img", { attrs: { src: "images/user1.png" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "team-content" }, [
-                  _c("h3", { staticClass: "title" }, [_vm._v("Mathias Pora")]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "post" }, [_vm._v("Président")])
-                ]),
-                _vm._v(" "),
-                _c("ul", { staticClass: "social" }, [
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-facebook",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-google-plus",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-instagram",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-linkedin",
-                      attrs: { href: "#" }
-                    })
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3 col-sm-6" }, [
-              _c("div", { staticClass: "our-team" }, [
-                _c("div", { staticClass: "pic" }, [
-                  _c("img", { attrs: { src: "images/user2.png" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "team-content" }, [
-                  _c("h3", { staticClass: "title" }, [
-                    _vm._v("Pierre Otuszewski")
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "post" }, [
-                    _vm._v("Vice-président")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("ul", { staticClass: "social" }, [
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-facebook",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-google-plus",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-instagram",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-linkedin",
-                      attrs: { href: "#" }
-                    })
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3 col-sm-6" }, [
-              _c("div", { staticClass: "our-team" }, [
-                _c("div", { staticClass: "pic" }, [
-                  _c("img", { attrs: { src: "images/user1.png" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "team-content" }, [
-                  _c("h3", { staticClass: "title" }, [_vm._v("Mathias Pora")]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "post" }, [_vm._v("Président")])
-                ]),
-                _vm._v(" "),
-                _c("ul", { staticClass: "social" }, [
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-facebook",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-google-plus",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-instagram",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-linkedin",
-                      attrs: { href: "#" }
-                    })
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3 col-sm-6" }, [
-              _c("div", { staticClass: "our-team" }, [
-                _c("div", { staticClass: "pic" }, [
-                  _c("img", { attrs: { src: "images/user2.png" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "team-content" }, [
-                  _c("h3", { staticClass: "title" }, [
-                    _vm._v("Pierre Otuszewski")
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "post" }, [
-                    _vm._v("Vice-président")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("ul", { staticClass: "social" }, [
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-facebook",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-google-plus",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-instagram",
-                      attrs: { href: "#" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-linkedin",
-                      attrs: { href: "#" }
-                    })
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
+    return _c("ul", { staticClass: "social" }, [
+      _c("li", [
+        _c("a", {
+          staticClass: "fab fa-facebook",
+          attrs: {
+            target: "_blank",
+            href: "https://www.facebook.com/Orcusaasso"
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", {
+          staticClass: "fab fa-twitter",
+          attrs: { target: "_blank", href: "https://twitter.com/Orcusa2" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", {
+          staticClass: "fab fa-instagram",
+          attrs: {
+            target: "_blank",
+            href: "https://www.instagram.com/orcusa_off"
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", {
+          staticClass: "fab fa-linkedin",
+          attrs: {
+            target: "_blank",
+            href: "https://www.linkedin.com/in/matthias-p-3ba296208/"
+          }
+        })
       ])
     ])
   },

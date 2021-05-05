@@ -26,72 +26,20 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="our-team">
+                        <div v-for="(user, i) in users" :key="i" class="col-md-3 col-sm-6">
+                            <div class="our-team"  v-if="user.userType == 'admin'">
                                 <div class="pic">
-                                    <img src="images/user1.png">
+                                    <img v-bind:src="user.image">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="title">Mathias Pora</h3>
+                                    <h3 class="title">{{user.fullName}}</h3>
                                     <span class="post">Président</span>
                                 </div>
                                 <ul class="social">
-                                    <li><a href="#" class="fab fa-facebook"></a></li>
-                                    <li><a href="#" class="fab fa-google-plus"></a></li>
-                                    <li><a href="#" class="fab fa-instagram"></a></li>
-                                    <li><a href="#" class="fab fa-linkedin"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="our-team">
-                                <div class="pic">
-                                    <img src="images/user2.png">
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="title">Pierre Otuszewski</h3>
-                                    <span class="post">Vice-président</span>
-                                </div>
-                                <ul class="social">
-                                    <li><a href="#" class="fab fa-facebook"></a></li>
-                                    <li><a href="#" class="fab fa-google-plus"></a></li>
-                                    <li><a href="#" class="fab fa-instagram"></a></li>
-                                    <li><a href="#" class="fab fa-linkedin"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="our-team">
-                                <div class="pic">
-                                    <img src="images/user1.png">
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="title">Mathias Pora</h3>
-                                    <span class="post">Président</span>
-                                </div>
-                                <ul class="social">
-                                    <li><a href="#" class="fab fa-facebook"></a></li>
-                                    <li><a href="#" class="fab fa-google-plus"></a></li>
-                                    <li><a href="#" class="fab fa-instagram"></a></li>
-                                    <li><a href="#" class="fab fa-linkedin"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="our-team">
-                                <div class="pic">
-                                    <img src="images/user2.png">
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="title">Pierre Otuszewski</h3>
-                                    <span class="post">Vice-président</span>
-                                </div>
-                                <ul class="social">
-                                    <li><a href="#" class="fab fa-facebook"></a></li>
-                                    <li><a href="#" class="fab fa-google-plus"></a></li>
-                                    <li><a href="#" class="fab fa-instagram"></a></li>
-                                    <li><a href="#" class="fab fa-linkedin"></a></li>
+                                    <li><a target="_blank" href="https://www.facebook.com/Orcusaasso" class="fab fa-facebook"></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/Orcusa2" class="fab fa-twitter"></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/orcusa_off" class="fab fa-instagram"></a></li>
+                                    <li><a target="_blank" href="https://www.linkedin.com/in/matthias-p-3ba296208/" class="fab fa-linkedin"></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -138,8 +86,18 @@ export default {
         return{
             data: {
                 members: 8
-            }
+            },
+            users: [],
         }
-    }
+    },
+	async created(){
+        this.token = window.Laravel.csrfToken
+		const res = await this.callApi('get', 'app/get_users')
+		if(res.status === 200){
+			this.users = res.data
+		}else{
+			this.swr()
+		}
+	}
 }
 </script>
