@@ -133,8 +133,8 @@
                     </div>
 
 					<div class="space">
-						<div class="demo-upload-list" v-if="data.image">
-							<img :src="`${data.image}`">
+						<div class="demo-upload-list" v-if="editData.image">
+							<img :src="`${editData.image}`">
 							<div class="demo-upload-list-cover" >
 								<Icon type="ios-trash-outline" @click="deleteImage"></Icon>
 							</div>
@@ -188,7 +188,7 @@ export default {
                 email: '',
                 password: '',
                 userType: '',
-                image: this.image
+                image: ''
 			},
             token: '',
 			index: -1,
@@ -235,13 +235,18 @@ export default {
 			if(this.editData.email.trim() == '') return this.e('Email is required')
 			if(!this.editData.userType.trim()) return this.e('UserType is required')
 
-			this.editData.image = `${this.data.image}`
+			this.editData.image = `${this.editData.image}`
 			
 			const res = await this.callApi('post', 'app/edit_user', this.editData)
 			if(res.status === 200){
 				this.users[this.index] = this.editData
 				this.s('User has been edited succesfully!')
 				this.editModal = false
+				this.data.image = ''
+				this.data.fullName = ''
+				this.data.email = ''
+				this.data.password = ''
+				this.data.userType = ''
 				this.$refs.uploads.clearFiles()
 			}else{
 				if(res.status == 422){
@@ -258,7 +263,8 @@ export default {
 				id: user.id,
 				fullName: user.fullName,
                 email: user.email,
-                userType: user.userType
+                userType: user.userType,
+				image: user.image
 			}
 			this.editData = obj
 			this.editModal = true

@@ -22,7 +22,7 @@
               <li><router-link to="users"><Icon type="ios-people"/>Utilisateurs</router-link></li>
               <li><router-link to="eventsManage"><Icon type="ios-megaphone"/>Évènements</router-link></li>
               <li><router-link to="demandes"><Icon type="ios-megaphone"/>Demande d'adhésion</router-link></li>
-              <li><router-link to="forumManage"><Icon type="ios-create"/>Forum</router-link></li>
+              <li><a href="/wink" target="_blank"><Icon type="ios-create"/>Blog</a></li>
               
 
 

@@ -2140,7 +2140,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         email: '',
         password: '',
         userType: '',
-        image: this.image
+        image: ''
       },
       token: '',
       index: -1,
@@ -2271,7 +2271,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return _context2.abrupt("return", _this2.e('UserType is required'));
 
               case 6:
-                _this2.editData.image = "".concat(_this2.data.image);
+                _this2.editData.image = "".concat(_this2.editData.image);
                 _context2.next = 9;
                 return _this2.callApi('post', 'app/edit_user', _this2.editData);
 
@@ -2284,6 +2284,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this2.s('User has been edited succesfully!');
 
                   _this2.editModal = false;
+                  _this2.data.image = '';
+                  _this2.data.fullName = '';
+                  _this2.data.email = '';
+                  _this2.data.password = '';
+                  _this2.data.userType = '';
 
                   _this2.$refs.uploads.clearFiles();
                 } else {
@@ -2309,7 +2314,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         id: user.id,
         fullName: user.fullName,
         email: user.email,
-        userType: user.userType
+        userType: user.userType,
+        image: user.image
       };
       this.editData = obj;
       this.editModal = true;
@@ -86485,21 +86491,17 @@ var render = function() {
                   1
                 ),
                 _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { attrs: { to: "forumManage" } },
-                      [
-                        _c("Icon", { attrs: { type: "ios-create" } }),
-                        _vm._v("Forum")
-                      ],
-                      1
-                    )
-                  ],
-                  1
-                )
+                _c("li", [
+                  _c(
+                    "a",
+                    { attrs: { href: "/wink", target: "_blank" } },
+                    [
+                      _c("Icon", { attrs: { type: "ios-create" } }),
+                      _vm._v("Blog")
+                    ],
+                    1
+                  )
+                ])
               ]),
               _vm._v(" "),
               _c("ul", { staticClass: "_1side_menu_list_ul2" }, [
@@ -87048,9 +87050,9 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("div", { staticClass: "space" }, [
-                _vm.data.image
+                _vm.editData.image
                   ? _c("div", { staticClass: "demo-upload-list" }, [
-                      _c("img", { attrs: { src: "" + _vm.data.image } }),
+                      _c("img", { attrs: { src: "" + _vm.editData.image } }),
                       _vm._v(" "),
                       _c(
                         "div",
