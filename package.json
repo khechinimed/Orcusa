@@ -26,6 +26,8 @@
         "vue-twitch-player": "^1.0.8"
     },
     "dependencies": {
+        "laravel-vue-pagination": "^2.3.1",
+        "moment": "^2.29.1",
         "typed.js": "^2.0.12",
         "view-design": "^4.5.0",
         "vue-router": "^3.5.1"
