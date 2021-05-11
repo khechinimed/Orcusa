@@ -182,10 +182,18 @@ export default {
 				this.swr();
 			}
             
+        },
+        toggle(){
+            document.querySelectorAll('.faq-toggle').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    toggle.parentNode.classList.toggle('active');
+                });
+            }); 
         }
     },
     mounted(){
         this.loadTwitch();
+        this.toggle();        
     }
 }
 </script>
