@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -56,6 +57,9 @@ Route::post('app/upload', [UserController::class, 'upload']);
 Route::post('app/delete_image', [UserController::class, 'deleteImage']);
 
 Route::get('app/get_posts', [BlogController::class, 'getPosts']);
+Route::get('/post/{slug}', [BlogController::class, 'showPost']);
+
+Route::post('app/demande', [ContactController::class, 'demande']);
 
 //MailChimp pour newsletter
 Route::post('/subscribe', [NewsletterController::class, 'subscribe']);
