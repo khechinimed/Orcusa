@@ -60,6 +60,8 @@ Route::get('app/get_posts', [BlogController::class, 'getPosts']);
 Route::get('/post/{slug}', [BlogController::class, 'showPost']);
 
 Route::post('app/demande', [ContactController::class, 'demande']);
+Route::get('app/get_demandes', [ContactController::class, 'getDemandes']);
+Route::post('app/delete_demande', [ContactController::class, 'deleteUser']);
 
 //MailChimp pour newsletter
 Route::post('/subscribe', [NewsletterController::class, 'subscribe']);

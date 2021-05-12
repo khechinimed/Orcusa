@@ -40,4 +40,17 @@ class ContactController extends Controller
         ]);
         return $demande;
     }
+
+    public function getDemandes(){
+        return Adhesion::orderBy('id', 'desc')->get();
+    }
+
+    public function deleteUser(Request $request){
+        //validate
+        $this->validate($request, [
+            'id' => 'required',
+        ]);
+
+        return Adhesion::where('id', $request->id)->delete();
+    }
 }
