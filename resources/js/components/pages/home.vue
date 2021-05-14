@@ -40,10 +40,23 @@
         
         <div class="actus" id="actus">
             <div class="container">
-                <h2>Derniers Actus</h2>
-                <section>
-                    
-                </section>
+                <h2>Dernières Actus</h2>
+                <div class="row mb-2">
+                    <div class="col-md-6" v-for="post in posts.data" :key="post.id">
+                        <div class="row g-0 border me-4 rounded overflow-hidden flex-md-row mb-4 m shadow-sm h-md-250 position-relative">
+                            <div class="col d-flex flex-column position-static p-0" >
+                                <div class="col-auto d-none d-lg-block" style="padding: 0px;">
+                                    <img :src="`${post.featured_image}`" width="100%" height="100%">
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="mb-0">{{post.title}}</h3>
+                                    <div class="mb-1 text-muted">{{post.publish_date|formatDate}}</div>
+                                    <router-link :to="`/post/${post.slug}`" class="stretched-link">Lire la suite</router-link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -151,8 +164,10 @@
 export default {
     data(){
         return {
+            data: {},
+            posts: {},
             newsletter: {
-                email: '',
+                email: '',                
             }
         }
     },  
@@ -194,6 +209,15 @@ export default {
     mounted(){
         this.loadTwitch();
         this.toggle();        
-    }
+    },
+    async created(){
+        this.token = window.Laravel.csrfToken
+        const res = await this.callApi('get', 'app/get_posts')
+        if(res.status === 200){
+		 	this.posts = res.data
+		}else{
+		 	this.swr()
+		}
+	}
 }
 </script>
