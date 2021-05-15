@@ -64,10 +64,7 @@ class UserController extends Controller
         ]);
 
         $fileName = $request->image;
-        $filePath = public_path($fileName);
-        if(file_exists($filePath)){
-            Storage::delete($filePath);
-        }
+        $this->deleteFileFromServer($fileName);
 
         return User::where('id', $request->id)->delete();
     }
