@@ -26,14 +26,14 @@
 
                 <div class="container">
                     <div class="row">
-                        <div v-for="(user, i) in users" :key="i" class="col-md-3 col-sm-6">
-                            <div class="our-team"  v-if="user.userType == 'admin'">
+                        <div v-for="(user, i) in admins" :key="i" class="col-md-3 col-sm-6">
+                            <div class="our-team">
                                 <div class="pic">
                                     <img v-bind:src="user.image">
                                 </div>
                                 <div class="team-content">
                                     <h3 class="title">{{user.fullName}}</h3>
-                                    <span class="post">Président</span>
+                                    <span class="post"></span>
                                 </div>
                                 <ul class="social">
                                     <li><a target="_blank" href="https://www.facebook.com/Orcusaasso" class="fab fa-facebook"></a></li>
@@ -55,13 +55,13 @@
 
                 <div class="container">
                     <div class="row">
-                        <div v-for="member in data.members" :key="member" class="col-md-3 col-sm-6">
+                        <div v-for="(user, i) in membres" :key="i" class="col-md-3 col-sm-6">
                             <div class="our-team">
                                 <div class="pic">
-                                    <img src="images/user1.png">
+                                    <img v-bind:src="user.image">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="title">Mathias Pora</h3>
+                                    <h3 class="title">{{user.fullName}}</h3>
                                 </div>
                             </div>
                         </div>
@@ -84,20 +84,25 @@
 export default {
     data(){
         return{
-            data: {
-                members: 8
-            },
-            users: [],
+            admins: [],
+            membres: []
         }
     },
 	async created(){
         this.token = window.Laravel.csrfToken
 		const res = await this.callApi('get', 'app/get_users')
 		if(res.status === 200){
-			this.users = res.data
+			this.admins = res.data.filter(function (user) {
+                return user.userType == 'admin'
+            })
+
+            this.membres = res.data.filter(function (user) {
+                return user.userType == 'membre'
+            })
 		}else{
 			this.swr()
 		}
-	}
+	},
+    
 }
 </script>

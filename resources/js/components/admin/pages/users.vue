@@ -68,7 +68,7 @@
                         <Input type="email" v-model="data.email" placeholder="Email" style="width: 300px" />
                     </div>
                     <div class="space">
-                        <Input type="password" v-model="data.password" placeholder="Mot de passe" style="width: 300px" />
+                        <Input type="password" v-model="data.password" placeholder="Mot de passe (min: 6 caractère)" style="width: 300px" />
                     </div>
 					<div class="space">
                          <Select v-model="data.userType" style="width:200px" placeholder="Role de l'utilisateur">
@@ -235,8 +235,12 @@ export default {
 			if(this.editData.email.trim() == '') return this.e('Email is required')
 			if(!this.editData.userType.trim()) return this.e('UserType is required')
 
-			this.editData.image = `${this.data.image}`
-			
+			if(this.data.image){
+				this.editData.image = `${this.data.image}`
+			}else{
+				this.editData.image = `${this.editData.image}`
+			}
+
 			const res = await this.callApi('post', 'app/edit_user', this.editData)
 			if(res.status === 200){
 				this.users[this.index] = this.editData
