@@ -2,7 +2,7 @@
 
     <div class="container">
 		<ButtonGroup style="padding: 20px 0px;">
-            <Button type="primary" to="/forum">
+            <Button type="primary" to="/forum" style="background-color: #343a40;">
                 <Icon type="ios-arrow-back" />
                 Revenir en arrière
             </Button>
