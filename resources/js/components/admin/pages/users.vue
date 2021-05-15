@@ -235,7 +235,7 @@ export default {
 			if(this.editData.email.trim() == '') return this.e('Email is required')
 			if(!this.editData.userType.trim()) return this.e('UserType is required')
 
-			this.editData.image = `${this.editData.image}`
+			this.editData.image = `${this.data.image}`
 			
 			const res = await this.callApi('post', 'app/edit_user', this.editData)
 			if(res.status === 200){
