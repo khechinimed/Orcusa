@@ -16,8 +16,7 @@
                                 <div class="p-4">
                                     <h3 class="mb-0">{{post.title}}</h3>
                                     <div class="mb-1 text-muted">{{post.publish_date|formatDate}}</div>
-                                    <p class="card-text mb-auto">{{post.body|truncate(80)}}</p>
-                                    <router-link to="#" class="stretched-link">Lire la suite</router-link>
+                                    <router-link :to="{name:'post', params: {slug: post.slug}}" class="stretched-link">Lire la suite</router-link>
                                 </div>
                             </div>
                             

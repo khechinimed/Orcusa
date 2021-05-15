@@ -906,6 +906,15 @@ h2{
     font-family: 'Teko';
 }
 
+/*Page des postes*/
+.embedded_image img{
+    width: 100%;
+    margin-bottom: 65px;
+}
+.lead p{
+    text-align: start;
+}
+
 /* Animation */
 @keyframes buttonZoom {
     0%   {}

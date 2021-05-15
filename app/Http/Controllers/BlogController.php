@@ -15,7 +15,6 @@ class BlogController extends Controller
 
     public function showPost($slug){
         $post = WinkPost::where('slug', $slug)->first();
-
         return $post;
     }
 }

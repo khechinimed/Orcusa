@@ -37,6 +37,8 @@ Route::get('/stream', function () { return view('welcome'); });
 
 Route::get('/forum', function () { return view('welcome'); });
 
+Route::get('/post/{slug}', function () { return view('welcome'); });
+
 Route::get('/contact', function () { return view('welcome'); });
 
 
@@ -57,7 +59,7 @@ Route::post('app/upload', [UserController::class, 'upload']);
 Route::post('app/delete_image', [UserController::class, 'deleteImage']);
 
 Route::get('app/get_posts', [BlogController::class, 'getPosts']);
-Route::get('/post/{slug}', [BlogController::class, 'showPost']);
+Route::get('app/post/{slug}', [BlogController::class, 'showPost']);
 
 Route::post('app/demande', [ContactController::class, 'demande']);
 Route::get('app/get_demandes', [ContactController::class, 'getDemandes']);

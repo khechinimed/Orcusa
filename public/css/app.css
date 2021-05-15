@@ -11093,9 +11093,24 @@ h2{
     margin-top: 4%;
 }
 
-.actus section{
-    height: 40rem;
+.actus h3{
+    text-align: initial;
+    font-family: 'Anton';
+    font-size: 2.3rem;
 }
+.actus h2{
+    padding: 30px;
+}
+.actus .p-4 p{
+    padding: 15px 0px 7px 0px;
+    font-size: 15px;
+}
+
+.actus .p-4 a{
+    font-size: 1.7rem;
+    font-family: 'Teko';
+}
+
 
 .description{
     background-color: #435560;
@@ -11781,6 +11796,7 @@ h2{
     color: #515a6e;
 }
 
+/*Page de donation*/
 .donation{
     text-align: center;
     padding: 5%;
@@ -11804,7 +11820,15 @@ h2{
 .events-page{
     padding: 40px 0px;
 }
+.space{
+    margin: 15px;
+}
 
+.ivu-modal-body{
+    padding: 0px !important;
+}
+
+/*Forum*/
 .forum .row{
     margin-right: 0px;
     margin-left: 0px;
@@ -11825,6 +11849,15 @@ h2{
 .forum .p-4 a{
     font-size: 1.7rem;
     font-family: 'Teko';
+}
+
+/*Page des postes*/
+.embedded_image img{
+    width: 100%;
+    margin-bottom: 65px;
+}
+.lead p{
+    text-align: start;
 }
 
 /* Animation */
@@ -11890,6 +11923,13 @@ h2{
 
     .contact-form .infos{
         display: none;
+    }
+    .actus h3{
+        font-size: 1.6rem;
+    }
+    
+    .actus .p-4 a{
+        font-size: 1rem;
     }
 }
 
