@@ -19,8 +19,8 @@
           <div class="_1side_menu_list">
             <ul class="_1side_menu_list_ul">
               <li><router-link to="dashboard"><Icon type="md-analytics"/>Dashboard</router-link></li>
+              <li><router-link to="events"><Icon type="ios-megaphone"/>Évènements</router-link></li>
               <li><router-link to="users"><Icon type="ios-people"/>Utilisateurs</router-link></li>
-              <li><router-link to="eventsManage"><Icon type="ios-megaphone"/>Évènements</router-link></li>
               <li><router-link to="demandes"><Icon type="ios-megaphone"/>Demande d'adhésion</router-link></li>
               <li><a href="/wink" target="_blank"><Icon type="ios-create"/>Blog</a></li>
               
