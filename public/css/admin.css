@@ -22,6 +22,19 @@
 
 
 
+/* Calendrier*/
+.calendrier{
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+  background: #fff;
+  position: relative;
+  flex-grow: 1;
+  border-top: 4px solid #48768e;
+  margin-top: 15px;
+  padding-bottom: 12px;
+}
+.fc{
+  margin: 40px;
+}
 /*========= 1.COMMON ========*/
 p {
     font-size: 1rem;

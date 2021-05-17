@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalendarController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
@@ -21,3 +22,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Formulaire de contact
 Route::post('/send-contact', [ContactController::class, 'send']);
+
+//Calendar
+Route::apiResource('/calendar', CalendarController::class);

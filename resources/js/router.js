@@ -5,7 +5,7 @@ Vue.use(Router)
 
 import home from './components/pages/home'
 import association from './components/pages/association'
-import events from './components/pages/events'
+import evenements from './components/pages/events'
 import donation from './components/pages/donation'
 import stream from './components/pages/stream'
 import forum from './components/pages/forum'
@@ -17,6 +17,7 @@ import contact from './components/pages/contact'
 import dashboard from './components/admin/pages/dashboard'
 import users from './components/admin/pages/users'
 import demandes from './components/admin/pages/demandes'
+import events from './components/admin/pages/events'
 
 const routes = [
     //Project routes
@@ -31,7 +32,7 @@ const routes = [
     },
     {
         path: '/evenements',
-        component: events
+        component: evenements
     },
     {
         path: '/donation',
@@ -67,6 +68,10 @@ const routes = [
     {
         path: '/demandes',
         component: demandes
+    },
+    {
+        path: '/events',
+        component: events
     }
 ]
 
