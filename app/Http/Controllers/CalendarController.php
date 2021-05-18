@@ -6,6 +6,7 @@ use App\Http\Resources\CalendarResource;
 use App\Models\Calendar;
 use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CalendarController extends Controller
 {
@@ -99,5 +100,37 @@ class CalendarController extends Controller
         //
         $calendar->delete();
         return response('Évènement supprimé _');
+    }
+
+    
+    public function upload(Request $request){
+        $request->validate([
+            'file' => 'required|mimes:jpeg,jpg,png'
+        ]);
+
+        $picName = time().'.'.$request->file->extension();
+        $request->file->move(public_path('events_uploads'), $picName);
+
+        return $picName;
+    }
+
+    public function deleteImage(Request $request){
+        $fileName = $request->image;
+        
+        $this->deleteFileFromServer($fileName);
+
+        return $fileName;
+        
+    }
+
+    public function deleteFileFromServer($fileName){
+        $filePath = public_path($fileName);
+        
+        if(file_exists($filePath)){
+            Storage::delete($filePath);
+            unlink($filePath);
+        }
+
+        return $filePath;
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\UserController;
@@ -64,6 +65,8 @@ Route::get('app/post/{slug}', [BlogController::class, 'showPost']);
 Route::post('app/demande', [ContactController::class, 'demande']);
 Route::get('app/get_demandes', [ContactController::class, 'getDemandes']);
 Route::post('app/delete_demande', [ContactController::class, 'deleteUser']);
+
+Route::post('event_image/upload', [CalendarController::class, 'upload']);
 
 //MailChimp pour newsletter
 Route::post('/subscribe', [NewsletterController::class, 'subscribe']);
