@@ -50,11 +50,11 @@
                                 <div class="col-md-6 mb-4" v-if="addingMode">
                                     <Button type="primary" class="btn btn-sm btn-primary" @click="addNewEvent">Ajouter l'Évènement</Button>
                                 </div>
-                                <template>
+                                <template v-if="updating">
                                     <div class="col-md-6 mb-4">
                                         <Button type="success" @click="updateEvent">Modifier</Button>
-                                        <Button type="error">Supprimer</Button>
-                                        <Button type="warning" @click="addingMode = !addingMode">Annuler</Button>
+                                        <Button type="error" @click="deleteEvent">Supprimer</Button>
+                                        <Button type="warning" @click="cancel">Annuler</Button>
                                     </div>
                                 </template>
                             </div>
@@ -105,7 +105,8 @@ export default {
             end_date: ""
         },
         addingMode: true,
-        indexToUpdate: ""
+        indexToUpdate: "",
+        updating: false
     }
   },
   methods: {
@@ -127,11 +128,7 @@ export default {
         if(res.status === 201 || res.status === 200){
             this.calendarOptions.events.unshift(res.data.data);
             this.s('Event a bien été ajouté!')
-            this.newEvent.event_name = ''
-            this.newEvent.event_image = ''
-            this.newEvent.event_description = ''
-            this.newEvent.start_date = ''
-            this.newEvent.end_date = ''
+            this.resetForm()
 
             this.$refs.uploads.clearFiles()
         }else{
@@ -145,6 +142,7 @@ export default {
         }
     },
     showEvent(arg) {
+        this.updating = true
         this.addingMode = false;
         const { id, title, description, image, start, end} =  this.calendarOptions.events.find(
             event => event.id === +arg.event.id
@@ -170,10 +168,22 @@ export default {
             this.addingMode = !this.addingMode;
         }
     },
+    async deleteEvent(){
+        const res = await this.callApi('delete', "/api/calendar/" + this.indexToUpdate, this.newEvent)
+        this.resetForm();
+        this.getEvents();
+        this.s('Event a bien été supprimé!')
+        this.addingMode = !this.addingMode;
+    },
     resetForm() {
       Object.keys(this.newEvent).forEach(key => {
         return (this.newEvent[key] = "");
       });
+    },
+    cancel(){
+        this.addingMode = !this.addingMode
+        this.resetForm()
+        this.updating = false
     },
     handleError (res, file) {
         this.$Notice.warning({
