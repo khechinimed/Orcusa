@@ -52,7 +52,7 @@
                                 </div>
                                 <template>
                                     <div class="col-md-6 mb-4">
-                                        <Button type="success">Modifier</Button>
+                                        <Button type="success" @click="updateEvent">Modifier</Button>
                                         <Button type="error">Supprimer</Button>
                                         <Button type="warning" @click="addingMode = !addingMode">Annuler</Button>
                                     </div>
@@ -109,8 +109,13 @@ export default {
     }
   },
   methods: {
-    getEvents(){
-          
+    async getEvents(){
+        const res = await this.callApi('get', '/api/calendar')
+        if(res.status === 200){
+            this.calendarOptions.events = res.data.data
+        }else{
+            this.swr()
+        }
     },
     async addNewEvent(){
         if(this.newEvent.event_name.trim() == '') return this.e('Veuillez ajoutez un Event')
@@ -121,7 +126,7 @@ export default {
         const res = await this.callApi('post', '/api/calendar', this.newEvent)
         if(res.status === 201 || res.status === 200){
             this.calendarOptions.events.unshift(res.data.data);
-            this.s('Event has been added succesfully!')
+            this.s('Event a bien été ajouté!')
             this.newEvent.event_name = ''
             this.newEvent.event_image = ''
             this.newEvent.event_description = ''
@@ -140,7 +145,6 @@ export default {
         }
     },
     showEvent(arg) {
-        console.log("zbi")
         this.addingMode = false;
         const { id, title, description, image, start, end} =  this.calendarOptions.events.find(
             event => event.id === +arg.event.id
@@ -151,9 +155,25 @@ export default {
             event_name: title,
             event_image: image,
             event_description: description,
-            start_date: start,
-            end_date: end
         };
+    },
+    async updateEvent(){
+        if(this.newEvent.event_name.trim() == '') return this.e('Veuillez ajoutez un Event')
+        if(this.newEvent.event_description.trim() == '') return this.e('Veuillez ajoutez une description')
+
+        const res = await this.callApi('put', "/api/calendar/" + this.indexToUpdate, this.newEvent)
+        if(res.status === 201 || res.status === 200){
+            this.calendarOptions.events.unshift(res.data.data);
+            this.s('Event a bien été modifié!')
+            this.resetForm()
+            this.getEvents()
+            this.addingMode = !this.addingMode;
+        }
+    },
+    resetForm() {
+      Object.keys(this.newEvent).forEach(key => {
+        return (this.newEvent[key] = "");
+      });
     },
     handleError (res, file) {
         this.$Notice.warning({
@@ -178,12 +198,7 @@ export default {
 
   async created(){
     this.token = window.Laravel.csrfToken
-    const res = await this.callApi('get', '/api/calendar')
-    if(res.status === 200){
-        this.calendarOptions.events = res.data.data
-    }else{
-        this.swr()
-    }
+    this.getEvents()
   }
 }
 </script>
