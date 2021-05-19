@@ -19,6 +19,7 @@
                                     ref="uploads"
                                     :multiple="false"
                                     :headers="{'x-csrf-token' : token, 'X-Requested-With' : 'XMLHttpRequest'}"
+                                    :on-success="handleSuccess"
                                     :on-error="handleError"
                                     :max-size="3048"
                                     :format="['jpg','jpeg','png']"
@@ -184,6 +185,14 @@ export default {
         this.addingMode = !this.addingMode
         this.resetForm()
         this.updating = false
+    },
+    handleSuccess(res, file) {
+        res = `/events_uploads/${res}`;
+        this.$refs.uploads.clearFiles();
+        if (this.addingMode) {
+            return (this.newEvent.event_image = res);
+        }
+        this.data.image = res;
     },
     handleError (res, file) {
         this.$Notice.warning({

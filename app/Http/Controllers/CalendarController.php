@@ -99,6 +99,8 @@ class CalendarController extends Controller
     {
         //
         $calendar->delete();
+        $fileName = $calendar->event_image;
+        $this->deleteFileFromServer($fileName);
         return response('Évènement supprimé _');
     }
 
