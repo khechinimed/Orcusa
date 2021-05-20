@@ -67,6 +67,7 @@ Route::get('app/get_demandes', [ContactController::class, 'getDemandes']);
 Route::post('app/delete_demande', [ContactController::class, 'deleteUser']);
 
 Route::post('event_image/upload', [CalendarController::class, 'upload']);
+Route::post('event_image/delete', [CalendarController::class, 'edit']);
 
 //MailChimp pour newsletter
 Route::post('/subscribe', [NewsletterController::class, 'subscribe']);

@@ -30,6 +30,12 @@
                                     <Button icon="ios-cloud-upload-outline">Uploader l'image</Button>
                                 </Upload>
                             </div>
+                            <div class="demo-upload-list" v-if="newEvent.event_image">
+                                <img :src="`${newEvent.event_image}`">
+                                <div class="demo-upload-list-cover" >
+                                    <Icon type="ios-trash-outline" @click="deleteImage"></Icon>
+                                </div>
+						    </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -166,14 +172,17 @@ export default {
             this.s('Event a bien été modifié!')
             this.resetForm()
             this.getEvents()
-            this.addingMode = !this.addingMode;
+            this.addingMode = !this.addingMode
+            this.updating = false
         }
     },
     async deleteEvent(){
         const res = await this.callApi('delete', "/api/calendar/" + this.indexToUpdate, this.newEvent)
+        if(res.status === 200){    
+            this.s('Event a bien été supprimé!')
+        }
         this.resetForm();
         this.getEvents();
-        this.s('Event a bien été supprimé!')
         this.addingMode = !this.addingMode;
     },
     resetForm() {
@@ -186,13 +195,22 @@ export default {
         this.resetForm()
         this.updating = false
     },
+    async deleteImage(){
+        const res = await this.callApi("post", "event_image/delete", this.newEvent.event_image);
+
+        if(res.status === 200) {
+            this.s('Image a été supprimé veuillez ajouter une autre!')
+            this.$refs.uploads.clearFiles();
+            this.newEvent.event_image = ""
+        }
+    },
     handleSuccess(res, file) {
         res = `/events_uploads/${res}`;
         this.$refs.uploads.clearFiles();
         if (this.addingMode) {
             return (this.newEvent.event_image = res);
         }
-        this.data.image = res;
+        this.newEvent.event_image = res;
     },
     handleError (res, file) {
         this.$Notice.warning({
@@ -212,7 +230,7 @@ export default {
             desc: 'Fichier  ' + file.name + ' est volumineux, taille max est 2M.'
         });
     },
-      
+    
   },
 
   async created(){
