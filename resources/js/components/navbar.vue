@@ -12,7 +12,7 @@
                         <li class="nav-item"><router-link to="/evenements" class="nav-link">Évènements</router-link></li>
                         <li class="nav-item"><router-link to="/donation" class="nav-link">Vous engager &#38; donation</router-link></li>
                         <li class="nav-item"><router-link to="/stream" class="nav-link">STREAM</router-link></li>
-                        <li class="nav-item"><router-link to="/forum" class="nav-link">Forum</router-link></li>
+                        <li class="nav-item"><router-link to="/blog" class="nav-link">BLOG</router-link></li>
                         <li class="nav-item"><router-link to="/contact" class="nav-link">Contactez-nous</router-link></li>
                     </ul>
                 </div>

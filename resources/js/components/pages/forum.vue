@@ -5,7 +5,7 @@
                 
             </div>
             <div class="forum-section">
-                <h2>Forum</h2>
+                <h2>BLOG</h2>
                 <div class="row mb-2">
                     <div class="col-md-6" v-for="post in posts.data" :key="post.id">
                         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">

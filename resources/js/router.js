@@ -43,7 +43,7 @@ const routes = [
         component: stream
     },
     {
-        path: '/forum',
+        path: '/blog',
         component:  forum
     },
     {
