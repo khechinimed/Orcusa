@@ -196,7 +196,9 @@ export default {
         this.updating = false
     },
     async deleteImage(){
-        const res = await this.callApi("post", "event_image/delete", this.newEvent.event_image);
+        const res = await this.callApi("post", "event_image/delete", {
+			image: this.newEvent.event_image
+		});
 
         if(res.status === 200) {
             this.s('Image a été supprimé veuillez ajouter une autre!')
