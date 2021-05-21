@@ -118,7 +118,6 @@ class CalendarController extends Controller
 
     public function deleteImage(Request $request){
         $fileName = $request->image;
-        
         $this->deleteFileFromServer($fileName);
 
         return $fileName;
@@ -127,7 +126,6 @@ class CalendarController extends Controller
 
     public function deleteFileFromServer($fileName){
         $filePath = public_path($fileName);
-        
         if(file_exists($filePath)){
             Storage::delete($filePath);
             unlink($filePath);

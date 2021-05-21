@@ -11860,6 +11860,11 @@ h2{
     text-align: start;
 }
 
+/*Events*/
+.events-page h2{
+    padding: 20px 0;
+}
+
 /* Animation */
 @-webkit-keyframes buttonZoom {
     0%   {}

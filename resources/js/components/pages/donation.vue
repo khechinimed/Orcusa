@@ -56,7 +56,7 @@
         </div>
         <div class="joinus">
             <div class="container">
-                <h2>Rejoingnez notre association</h2>
+                <h2>Rejoignez notre association</h2>
 
                 <div class="row">
                     <div class="col-md-4">
