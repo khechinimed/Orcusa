@@ -36,7 +36,7 @@ Route::get('/donation', function () { return view('welcome'); });
 
 Route::get('/stream', function () { return view('welcome'); });
 
-Route::get('/forum', function () { return view('welcome'); });
+Route::get('/blog', function () { return view('welcome'); });
 
 Route::get('/post/{slug}', function () { return view('welcome'); });
 

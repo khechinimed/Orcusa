@@ -13,7 +13,7 @@ Vue.mixin(common);
 import moment from 'moment'
 Vue.filter('formatDate', function(value) {
     if (value) {
-      return moment(String(value)).format('[Le] MM/DD/YYYY [à] hh:mm')
+      return moment(String(value)).format('[Le] MM/DD/YYYY [à] HH:mm')
     }
 })
 

@@ -919,6 +919,34 @@ h2{
 .events-page h2{
     padding: 20px 0;
 }
+.event-title{
+    font-family: 'Anton';
+    font-size: 3rem;
+    text-align: center;
+}
+.event-title-2 {
+    font-family: 'Anton';
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.event-description{
+    font-family: system-ui;
+    font-weight: 600;
+    padding: 20px 5px;
+}
+.event-date{
+    font-size: 1.7rem;
+    font-family: 'Shadows Into Light';
+    font-weight: 600;
+}
+.event-date .ivu-tag-text{
+    font-size: 18px;
+    font-family: emoji;
+    font-weight: 600;
+    padding: 12px;
+}
+
 
 /* Animation */
 @keyframes buttonZoom {
