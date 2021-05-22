@@ -15,10 +15,10 @@
                             @on-cancel="cancel">
                             <img :src="`${newEvent.event_image}`" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">{{newEvent.event_name}}</h5>
-                                <p class="card-text">{{newEvent.event_description}}</p>
-                                <p class="card-text">Date et heure : {{newEvent.start_date}}</p>
-                                <p class="card-text">Fin : {{newEvent.end_date}}</p>
+                                <h5 class="event-title card-title">{{newEvent.event_name}}</h5>
+                                <p class="event-description card-text">{{newEvent.event_description}}</p>
+                                <p class="event-date card-text">Date et heure : <Tag size="large" color="blue">{{newEvent.start_date | formatDate}}</Tag></p>
+                                <p class="event-date card-text" style="margin-left: 118px;">Fin : <Tag size="large" color="red">{{newEvent.end_date | formatDate}}</Tag></p>
                             </div>
                             <div slot="footer">
                                 <Button type="default" @click="modal1=false">Fermer</Button>
@@ -30,14 +30,14 @@
             <div class="last-events">
                 <h2 style="padding: 50px;">Evénements à venir</h2>
                 <div class="row mb-4">
-                    <div class="col-md-3 card" style="margin-left: 80px;padding: 0px;" v-for="event in computedObj" :key="event.id">
-                        <img :src="`${event.image}`" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">{{event.title}}</h5>
-                            <p class="card-text">{{event.description}}</p>
-                            <p class="card-text">{{event.start}}</p>
-                            <p class="card-text">{{event.end}}</p>
-                            <Button @click="showEvent" type="info">Montre</Button>
+                    <div class="col-6 col-md-3 col-sm-6 card" style="margin-top:15px; margin-left: 80px;padding: 0px;" v-for="event in computedObj" :key="event.id">
+                        <div class="col d-flex flex-column position-static p-0" >
+                            <img :src="`${event.image}`" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="event-title-2 card-title">{{event.title}}</h5>
+                                <p class="event-date card-text">Date et heure : <Tag color="blue">{{event.start | formatDate}}</Tag></p>
+                                <p class="event-date card-text">Fin : <Tag color="red">{{event.end | formatDate}}</Tag></p>
+                            </div>
                         </div>
                     </div>
                 </div>  
@@ -67,6 +67,7 @@
                     buttonText: {
                         today: 'Aujourd\'hui'
                     },
+                    timeFormat: 'H(:mm)',
                     eventClick: this.showEvent,
                     events: [],
                 },
