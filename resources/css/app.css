@@ -344,6 +344,14 @@ h2{
 	text-decoration: none;
 }
 
+.home .top{
+    padding: 10px;
+    background: rgb(72 118 142);
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+}
+
 @media screen and (max-width: 480px) {
 
 	.social-panel-container.visible {
