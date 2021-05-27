@@ -62,7 +62,7 @@ const routes = [
         component: users
     },
     {
-        path: '/dashboard',
+        path: '/admin',
         component: dashboard
     },
     {
