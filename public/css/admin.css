@@ -387,6 +387,11 @@ p {
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       box-shadow: 0 10px 20px rgba(47, 91, 231, 0.1);
   }
+  @media (max-width: 720px) {
+    ._1side_menu {
+      z-index: 111;
+    }    
+  }
   ._1side_menu_logo {
       text-align: center;
       border-bottom: 1px solid #f4f4f5;
@@ -463,7 +468,7 @@ p {
       border-right: 2px solid #0099ff !important;
   }
   /*========= 2.SIDEMENU ========*/
-  
+
   
   /*========= 3.HEADER =======*/
   .header {
@@ -489,10 +494,21 @@ p {
       padding: 0 15px 0 2px;
   }
   ._2menu_logo {
+      display: none;
       height: 100%;
       padding-top: 17px;
       border-right: 1px solid #ececec;
       padding-right: 3px;
+  }
+  @media (max-width: 720px) {
+    ._2menu_logo {
+      display: block;
+    }    
+  }
+  @media (min-width: 720px) {
+    ._2menu_logo {
+      display: none;
+    }    
   }
   ._2menu_logo_pic {
       width: 100px;
@@ -616,12 +632,31 @@ p {
       padding-left: 20px;
       padding-right: 20px;
   }
+  @media (max-width: 720px) {
+
+    .content{
+      margin-left: 0;
+      padding-top: 80px;
+      padding-bottom: 100px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+  }
+  @media (min-width: 720px) {
+
+    .content{
+      margin-left: 248px;
+      padding-top: 80px;
+      padding-bottom: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+  }
   .home_header:before{
       position: absolute;
       content: '';
-  }
-  .home {
-      
   }
   .home_header{
       

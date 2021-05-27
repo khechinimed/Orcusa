@@ -2,7 +2,7 @@
   <div>
     <div>
       <!--========== ADMIN SIDE MENU one ========-->
-      <div class="_1side_menu" >
+      <div class="_1side_menu show collapse" id="collapseExample">
         <div class="_1side_menu_logo">
           <img class="banner_logo"  style="width: 240px;margin-left: 0px;" :src="'/images/logo.png'">
           <!--<img src="/img/logo.jpg" style="width: 108px;margin-left: 68px;"/>-->
@@ -12,13 +12,13 @@
         <div class="_1side_menu_content">
           <div class="_1side_menu_img_name">
             <!-- <img class="_1side_menu_img" src="/pic.png" alt="" title=""> -->
-            <p class="_1side_menu_name">Admin</p>
+            <p class="_1side_menu_name">Tableau de bord</p>
           </div>
 
           <!--~~~ MENU LIST ~~~~~~-->
           <div class="_1side_menu_list">
             <ul class="_1side_menu_list_ul">
-              <li><router-link to="dashboard"><Icon type="md-analytics"/>Dashboard</router-link></li>
+              <li><router-link to="admin"><Icon type="md-analytics"/>Dashboard</router-link></li>
               <li><router-link to="events"><Icon type="ios-megaphone"/>Évènements</router-link></li>
               <li><router-link to="users"><Icon type="ios-people"/>Utilisateurs</router-link></li>
               <li><router-link to="demandes"><Icon type="ios-megaphone"/>Demande d'adhésion</router-link></li>
@@ -46,7 +46,7 @@
           <div class="_2menu_logo">
             <ul class="open_button">
               <li>
-                <Icon type="ios-list" />
+                <a  data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><Icon type="ios-list" /></a>
               </li>
               <!--<li><Icon type="ios-albums" /></li>-->
             </ul>
@@ -60,6 +60,7 @@
 </template>
 
 <script>
+
     export default {
         methods: {
             logout() {
