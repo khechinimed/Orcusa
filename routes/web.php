@@ -9,7 +9,6 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-use Wink\WinkPost;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +67,12 @@ Route::post('app/delete_demande', [ContactController::class, 'deleteUser']);
 
 Route::post('event_image/upload', [CalendarController::class, 'upload']);
 Route::post('event_image/delete', [CalendarController::class, 'deleteImage']);
+
+
+Route::get('app/countUsers', [UserController::class, 'countUsers']);
+Route::get('app/countDemandes', [UserController::class, 'countDemandes']);
+Route::get('app/countEvents', [UserController::class, 'countEvents']);
+Route::get('app/countPosts', [UserController::class, 'countPosts']);
 
 //MailChimp pour newsletter
 Route::post('/subscribe', [NewsletterController::class, 'subscribe']);

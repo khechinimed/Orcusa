@@ -35,6 +35,27 @@
 .fc{
   margin: 40px;
 }
+
+/* Dashboard PAGE*/
+.dashboard .icon{
+  font-size: 33px;
+}
+
+.border-left-warning {
+  border-left: .25rem solid #f6c23e!important;
+}
+
+.border-left-info {
+  border-left: .25rem solid #36b9cc!important;
+}
+
+.border-left-success {
+  border-left: .25rem solid #1cc88a!important;
+}
+
+.border-left-primary {
+  border-left: .25rem solid #4e73df!important;
+}
 /*========= 1.COMMON ========*/
 p {
     font-size: 1rem;

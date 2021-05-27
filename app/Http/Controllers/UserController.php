@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
@@ -99,6 +100,23 @@ class UserController extends Controller
 
         return $filePath;
     }
+
+    public function countUsers(){
+        return DB::table('users')->count();
+    }
+
+    public function countDemandes(){
+        return DB::table('adhesions')->count();
+    }
+    
+    public function countEvents(){
+        return DB::table('calendars')->count();
+    }
+    
+    public function countPosts(){
+        return DB::table('wink_posts')->count();
+    }
+
 
      
 }
