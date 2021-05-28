@@ -43,6 +43,7 @@ Route::get('/contact', function () { return view('welcome'); });
 
 
 
+// Route::get('/admin', [LoginController::class, 'authenticate']);
 Route::get('/admin', function () {
     //
     return view('admin');
@@ -51,12 +52,12 @@ Route::get('/admin', function () {
 Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('app/get_users', [UserController::class, 'getUsers']);
-Route::post('app/create_user', [UserController::class, 'createUser']);
-Route::post('app/edit_user', [UserController::class, 'editUser']);
-Route::post('app/delete_user', [UserController::class, 'deleteUser']);
+Route::post('app/create_user', [UserController::class, 'createUser'])->middleware('auth');
+Route::post('app/edit_user', [UserController::class, 'editUser'])->middleware('auth');
+Route::post('app/delete_user', [UserController::class, 'deleteUser'])->middleware('auth');
 
-Route::post('app/upload', [UserController::class, 'upload']);
-Route::post('app/delete_image', [UserController::class, 'deleteImage']);
+Route::post('app/upload', [UserController::class, 'upload'])->middleware('auth');
+Route::post('app/delete_image', [UserController::class, 'deleteImage'])->middleware('auth');
 
 Route::get('app/get_posts', [BlogController::class, 'getPosts']);
 Route::get('app/post/{slug}', [BlogController::class, 'showPost']);
