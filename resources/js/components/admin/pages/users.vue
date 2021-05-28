@@ -68,7 +68,7 @@
                         <Input type="email" v-model="data.email" placeholder="Email" style="width: 300px" />
                     </div>
                     <div class="space">
-                        <Input type="password" v-model="data.password" placeholder="Mot de passe (min: 6 caractère)" style="width: 300px" />
+                        <Input type="password" password v-model="data.password" placeholder="Mot de passe (min: 6 caractère)" style="width: 300px" />
                     </div>
 					<div class="space">
                          <Select v-model="data.userType" style="width:200px" placeholder="Role de l'utilisateur">
@@ -123,7 +123,7 @@
                         <Input type="email" v-model="editData.email" placeholder="Email" style="width: 300px" />
                     </div>
                     <div class="space">
-                        <Input type="password" v-model="editData.password" placeholder="Mot de passe" style="width: 300px" />
+                        <Input type="password" password v-model="editData.password" placeholder="Mot de passe" style="width: 300px" />
                     </div>
 					<div class="space">
                          <Select v-model="editData.userType" style="width:200px" placeholder="Role de l'utilisateur">
