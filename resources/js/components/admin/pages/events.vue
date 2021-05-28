@@ -11,7 +11,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="event_name">Description</label>
-                                <textarea type="text" id="event_name" class="form-control" v-model="newEvent.event_description"></textarea>
+                                <textarea type="text" id="event_name" class="form-control" v-model="newEvent.event_description" style="height: 150px;"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="event_name">Image</label>
