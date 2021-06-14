@@ -176,8 +176,8 @@
                                     </div>
                                     <form action="">
                                         <section v-for="faq in faqs" :key="faq.id">
-                                            <Input v-model="faq.title" placeholder="Enter something..." style="width: 300px;margin: 5px;"/>
-                                            <Input v-model="faq.text" placeholder="Enter something..." style="width: 300px;margin: 5px;" /><br>
+                                            <Input v-model="faq.title" placeholder="Enter something..." style="width: 300px;margin: 5px;"/>Q
+                                            <Input v-model="faq.text" placeholder="Enter something..." style="width: 300px;margin: 5px;" />A<br>
                                         </section>
                                         
                                         <Button type="success" style="margin: 0 100px;" @click="editFAQ">Modifier</Button>
@@ -236,7 +236,7 @@ export default {
             dm: "",
             ev: "",
             posts: "",
-            faqs: []
+            faqs: {}
         }
     },
     methods: {
@@ -270,10 +270,9 @@ export default {
                 }
         },
         async editFAQ(){
-
             const res = await this.callApi('post', 'faq/edit_faq', this.faqs)
             if(res.status === 200){
-                
+                this.s('FAQ has been updated succesfully!')
             }
         }
     },

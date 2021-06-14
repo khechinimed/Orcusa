@@ -72,6 +72,16 @@ class FAQController extends Controller
     public function updateFAQ(Request $request, FAQ $fAQ)
     {
         //
+
+        $collection = $request->all();
+        for ($i = 0; $i < count($collection); $i++) {
+        FAQ::where('id', $collection[$i]['id'])
+        ->update([
+          'title' => $collection[$i]['title'],
+          'text' => $collection[$i]['text']
+        ]);
+    }
+    return response()->json(['collection' => $collection]);
     }
 
     /**
