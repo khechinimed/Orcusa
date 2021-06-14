@@ -10,21 +10,17 @@
                 <div class="col-xs-6 col-md-3">
                   <h6>INFOS</h6>
                   <ul class="footer-links">
-                    <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                    <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                    <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                    <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                    <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                    <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                    <li><p class="text-justify">Orcusa</p></li>
+                    <li><p class="text-justify">Hordain, France</p></li>
                   </ul>
                 </div>
       
                 <div class="col-xs-6 col-md-3">
-                  <h6>Quick Links</h6>
+                  <h6>Liens Rapides</h6>
                   <ul class="footer-links">
                     <li><a href="/association">L'association</a></li>
-                    <li><a href="/association">Évènements</a></li>
-                    <li><a href="/engagement">Vous engager & donation</a></li>
+                    <li><a href="/evenements">Évènements</a></li>
+                    <li><a href="/donation">Vous engager & donation</a></li>
                     <li><a href="/stream">Stream</a></li>
                     <li><a href="/forum">Forum</a></li>
                     <li><a href="/contact">Contactez-nous</a></li>

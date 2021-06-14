@@ -7,15 +7,15 @@
                 <div class="row">
                     <div class="col">
                         <p>Président</p>
-                        <p>president@gmail.com</p>
-                    </div>
+                        <p>presidence@orcusa.fr</p>
+                    </div> 
                     <div class="col">
                         <p>Communication</p>
-                        <p>president@gmail.com</p>
+                        <p>communication@orcusa.fr</p>
                     </div>
                     <div class="col">
                         <p>Marketing</p>
-                        <p>marketing@gmail.com</p>
+                        <p>marketing@orcusa.fr</p>
                     </div>
                 </div>
             </div>

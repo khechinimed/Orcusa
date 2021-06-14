@@ -88,71 +88,21 @@
         <div class="partie_faq">
             <div class="container">
                 <h2>FAQ</h2>
-                <div class="faqs-container">
-                <div class="faq active">
-                    <h3 class="faq-title">
-                        Why shouldn't we trust atoms?
-                    </h3>
-                    <p class="faq-text">
-                        They make up everything.
-                    </p>
-                    <button class="faq-toggle">
-                        <i class="fas fa-chevron-down"></i>
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                
-                <div class="faq">
-                    <h3 class="faq-title">
-                        What do you call someone with no body and no nose?
-                    </h3>
-                    <p class="faq-text">
-                        Nobody knows.
-                    </p>
-                    <button class="faq-toggle">
-                        <i class="fas fa-chevron-down"></i>
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                
-                <div class="faq">
-                    <h3 class="faq-title">
-                        What's the object-oriented way to become wealthy?
-                    </h3>
-                    <p class="faq-text">
-                        Inheritance.
-                    </p>
-                    <button class="faq-toggle">
-                        <i class="fas fa-chevron-down"></i>
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                
-                <div class="faq">
-                    <h3 class="faq-title">
-                        How many tickles does it take to tickle an octopus?
-                    </h3>
-                    <p class="faq-text">
-                        Ten-tickles!
-                    </p>
-                    <button class="faq-toggle">
-                        <i class="fas fa-chevron-down"></i>
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                
-                <div class="faq">
-                    <h3 class="faq-title">
-                        What is: 1 + 1?
-                    </h3>
-                    <p class="faq-text">
-                        Depends on who are you asking.
-                    </p>
-                    <button class="faq-toggle">
-                        <i class="fas fa-chevron-down"></i>
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
+                <div class="faqs-container" v-for="faq in faqs" :key="faq.id">
+                    <div class="faq active">
+                        <h3 class="faq-title">
+                            {{faq.title}}
+                        </h3>
+                        <p class="faq-text">
+                            {{faq.text}}
+                        </p>
+                        <!-- <button class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-times"></i>
+                        </button> -->
+                    </div>
+                    
+                   
             </div>
             </div>
         </div>
@@ -169,6 +119,7 @@ export default {
         return {
             data: {},
             posts: {},
+            faqs: {},
             newsletter: {
                 email: '',                
             }
@@ -218,6 +169,13 @@ export default {
         const res = await this.callApi('get', 'app/get_posts')
         if(res.status === 200){
 		 	this.posts = res.data
+		}else{
+		 	this.swr()
+		}
+
+        const faq = await this.callApi('get', 'faq/get_faq')
+        if(faq.status === 200){
+		 	this.faqs = faq.data
 		}else{
 		 	this.swr()
 		}

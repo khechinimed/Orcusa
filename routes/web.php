@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -69,6 +70,8 @@ Route::post('app/delete_demande', [ContactController::class, 'deleteUser']);
 Route::post('event_image/upload', [CalendarController::class, 'upload']);
 Route::post('event_image/delete', [CalendarController::class, 'deleteImage']);
 
+Route::get('faq/get_faq', [FAQController::class, 'show']);
+Route::post('faq/edit_faq', [FAQController::class, 'updateFAQ']);
 
 Route::get('app/countUsers', [UserController::class, 'countUsers']);
 Route::get('app/countDemandes', [UserController::class, 'countDemandes']);
