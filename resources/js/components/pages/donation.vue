@@ -63,9 +63,9 @@
                         <img :src="'/images/joinus.jpg'">
                     </div>
                     <div class="col-md-6">
-                        <h4>Why de we use it ?</h4>
+                        <h4>VOUS SOUHAITEZ NOUS AIDER, NOUS SOUTENIR, PARTICIPER ?</h4>
                         <br>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                        <p>Votre adhésion est gratuite et est indépendante des dons qui peuvent également être envoyés par les particuliers ou les entreprises.<br> Les dons sont utilisés uniquement pour aider l'organisation logistique des gamers en situation de handicap afin de leur permettre d'assister aux événements proposés (frais de déplacement, aide au logement, besoin d'assistance etc...)<br><br>Merci pour votre aide !</p>
                     </div>
                 </div>
                 <div class="row">
